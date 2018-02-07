@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get '/about' => 'about#index', as: :about
 
   get '/services' => 'services#index', as: :services
+
+  get '/contact' => 'contact#index', as: :contact
 end
