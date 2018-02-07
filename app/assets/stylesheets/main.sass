@@ -1,2 +1,38 @@
-h1
-  background: green
+
+main
+  max-width: 1100px
+  margin: auto
+  padding-top: 5rem
+  padding-bottom: 5rem
+
+.clearfix
+  clear: both
+
+.navbar
+  float: left
+  margin-top: 5.5rem
+  text-transform: uppercase
+
+.brand
+  float: right
+
+@media only screen and (max-width: 978px)
+  .navbar
+    float: none
+    margin: auto
+    text-align: center
+    background: #ffe
+    margin-top: 0
+    .navbar-toggler
+      margin: auto
+
+//HOMEPAGE
+
+.caro-link
+  .caro-button
+    opacity: 0
+
+.caro-link:hover
+  background: rgba(0, 0, 0, 0.4)
+  .caro-button
+    opacity: 1
