@@ -8,17 +8,20 @@ $(window).on('turbolinks:load', function() {
   })
 
   $(window).scroll(function() {
-    var screenTop = $(window).scrollTop()
-    var screenHeight = $(window).height()
-    var screenBottom = screenTop+ screenHeight
-    var elemTop = $('.servicee').offset().top;
-    var elemBottom = elemTop + $('.servicee').height();
-    console.log(screenBottom);
-    console.log(elemBottom);
-    if (screenBottom > elemBottom) {
-      console.log('passed');
-      $('servicee').removeClass('opaque');
-      $('.servicee').addClass('animated fadeInUpBig');
-    }
+    var serviceSelector = '.service.hidden'
+    var screenTop = $(window).scrollTop();
+    var screenHeight = $(window).height();
+    var screenBottom = screenTop + screenHeight;
+
+    $(serviceSelector).each(function() {
+      var elemTop = $(this).offset().top;
+      var elemBottom = elemTop + $(this).height();
+      if (screenBottom > elemBottom) {
+        $(this).removeClass('hidden');
+        $(this).addClass('animated fadeInUpBig');
+      }
+    })
+
+
   })
 })
