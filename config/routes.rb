@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get '/services' => 'services#index', as: :services
 
   get '/contact' => 'contact#index', as: :contact
+
+  get '*path' => redirect('/home')
 end
