@@ -37,23 +37,6 @@ main
 .brand
   float: right
 
-@media only screen and (max-width: 991px)
-  body
-    padding-top: 56px
-  .navbar
-    float: none
-    margin: auto
-    text-align: center
-    background: #ffe
-    margin-top: 0
-    position: fixed !important
-    top: 0
-    right: 0
-    left: 0
-    z-index: 1030
-    .navbar-toggler
-      margin: auto
-
 //HOMEPAGE
 
 .caro-link
@@ -93,20 +76,51 @@ footer
 .services
   .row
     margin-bottom: 4rem
-    .picture,
-    .text
     .picture
-      padding: 0px
+      padding: 0
     .text
-      padding: 0 40px
+      padding: 0.5rem 3rem
       background: #ccd
       display: flex
       justify-content: center
       flex-direction: column
 
-//Contact
+// CONTACT
 .contact
   .info-container
     margin-bottom: 3rem
     padding-bottom: 3rem
     border-bottom: 1px solid #ddd
+
+
+// BREACKPOINTS
+
+@media (max-width: 991px)
+
+  // NAVBAR
+
+  body
+    padding-top: 56px
+  .navbar
+    float: none
+    margin: auto
+    text-align: center
+    background: #ffe
+    margin-top: 0
+    position: fixed !important
+    top: 0
+    right: 0
+    left: 0
+    z-index: 1030
+    .navbar-toggler
+      margin: auto
+
+
+@media (max-width: 767px)
+
+  //SERVICES
+
+  .services
+    .row
+      .text
+        padding: 3rem 3rem
