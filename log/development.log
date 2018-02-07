@@ -4599,3 +4599,311 @@ Processing by ServicesController#index as HTML
 Completed 200 OK in 2061ms (Views: 2057.3ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2018-02-07 23:58:04 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.1ms)
+  Rendered shared/_head.html.erb (64.4ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 97ms (Views: 94.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-02-07 23:58:12 +1100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (7.7ms)
+  Rendered shared/_head.html.erb (105.5ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 137ms (Views: 133.1ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-02-07 23:58:19 +1100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (15.6ms)
+  Rendered shared/_head.html.erb (109.4ms)
+  Rendered shared/_nav_bar.html.erb (1.0ms)
+  Rendered shared/_header.html.erb (3.1ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 147ms (Views: 141.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-07 23:58:51 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (10.8ms)
+  Rendered shared/_head.html.erb (101.0ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 145ms (Views: 140.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:00:47 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.7ms)
+  Rendered shared/_head.html.erb (77.3ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 101ms (Views: 98.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:00:55 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.5ms)
+  Rendered shared/_head.html.erb (64.2ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 95ms (Views: 88.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:01:14 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (11.8ms)
+  Rendered shared/_head.html.erb (64.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 97ms (Views: 93.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:01:28 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+  Rendered shared/_head.html.erb (60.1ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (2.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 91ms (Views: 86.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:02:06 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.3ms)
+  Rendered shared/_head.html.erb (69.9ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 98ms (Views: 94.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:02:16 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  Rendered shared/_head.html.erb (38.7ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 46.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:05:22 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+  Rendered shared/_head.html.erb (1994.0ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 2005ms (Views: 2004.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:05:52 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.9ms)
+  Rendered shared/_head.html.erb (2073.0ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 2092ms (Views: 2087.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:06:05 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.9ms)
+  Rendered shared/_head.html.erb (2078.1ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 2107ms (Views: 2102.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:07:41 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  Rendered shared/_head.html.erb (2143.9ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 2154ms (Views: 2152.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:08:02 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+  Rendered shared/_head.html.erb (109.5ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 125ms (Views: 121.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:08:16 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (11.4ms)
+  Rendered shared/_head.html.erb (108.5ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 139ms (Views: 135.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:08:41 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+  Rendered shared/_head.html.erb (138.9ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 168ms (Views: 164.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:09:51 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.9ms)
+  Rendered shared/_head.html.erb (2080.9ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 2109ms (Views: 2105.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:12:50 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+  Rendered shared/_head.html.erb (113.2ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 137ms (Views: 133.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:12:57 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.3ms)
+  Rendered shared/_head.html.erb (107.0ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 126ms (Views: 121.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:13:15 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.6ms)
+  Rendered shared/_head.html.erb (142.6ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 171ms (Views: 167.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:13:59 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+  Rendered shared/_head.html.erb (142.9ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (2.9ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 162ms (Views: 160.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:14:12 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered shared/_head.html.erb (117.6ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 127ms (Views: 126.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:14:22 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  Rendered shared/_head.html.erb (136.6ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (2.7ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 149ms (Views: 147.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:14:35 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.4ms)
+  Rendered shared/_head.html.erb (156.5ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 178ms (Views: 174.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 00:14:53 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.0ms)
+  Rendered shared/_head.html.erb (129.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 160ms (Views: 155.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-02-08 00:15:32 +1100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (7.0ms)
+  Rendered shared/_head.html.erb (83.6ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 111ms (Views: 107.5ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-02-08 00:15:52 +1100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (19.8ms)
+  Rendered shared/_head.html.erb (90.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 128.2ms)
+
+
