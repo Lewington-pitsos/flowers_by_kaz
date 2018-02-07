@@ -1,0 +1,19 @@
+<h1>Create new Category</h1>
+
+<%= form_for @category do |f| %>
+  <%= f.label 'Category title:' %>
+  <%= f.text_field :title %>
+  <br />
+
+  <%= f.label 'Category cover image:' %>
+  <%= f.file_field :image %>
+  <br />
+
+  <%= f.label 'Place:' %>
+  <%= f.number_field :place, value: 1 %>
+  <br /><br />
+
+  <%= f.submit 'Create' %>
+<% end %>
+
+<a href="javascript:history.back()"> Cancel</a>
