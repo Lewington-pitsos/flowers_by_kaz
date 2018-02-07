@@ -7,21 +7,24 @@ $(window).on('turbolinks:load', function() {
     $(event.target).fadeTo(300, 0);
   })
 
-  $(window).scroll(function() {
-    var serviceSelector = '.service.hidden'
-    var screenTop = $(window).scrollTop();
-    var screenHeight = $(window).height();
-    var screenBottom = screenTop + screenHeight;
 
-    $(serviceSelector).each(function() {
-      var elemTop = $(this).offset().top;
-      var elemBottom = elemTop + $(this).height();
-      if (screenBottom > elemBottom) {
-        $(this).removeClass('hidden');
-        $(this).addClass('animated fadeInUpBig');
-      }
-    })
+  if ($('.service.hidden').length) {
+    var serviceSelector = $('.service.hidden');
 
+    $(window).scroll(function() {
+      console.log('srcoll');
+      var screenTop = $(window).scrollTop();
+      var screenHeight = $(window).height();
+      var screenBottom = screenTop + screenHeight;
 
-  })
+      $(serviceSelector).each(function() {
+        var elemTop = $(this).offset().top;
+        var elemBottom = elemTop + $(this).height();
+        if (screenBottom > elemBottom) {
+          $(this).removeClass('hidden');
+          $(this).addClass('animated fadeInUpBig');
+        }
+      });
+    });
+  }
 })
