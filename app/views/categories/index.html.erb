@@ -1,12 +1,14 @@
 <div class="row covers">
   <% @categories.each do |category| %>
 
-    <div class="col-sm-3 covers-col">
-      <a href="<%= category_path(category.id) %>" class="subtle"><div class="container-fluid position-relative p-0">
-        <div class="overlay white opaque"></div>
-        <%= image_tag category.image.url, class: "img-fluid" %>
+    <div class="col-md-3 col-sm-4 col-6 covers-col position-relative p-2">
+      <div class="container-fluid p-0" style="background: url(<%= image_url(category.image.url) %>)">
+        <div class="square-img-wrapper"></div>
+      </div>
+      <div class="container-fluid pt-1">
         <h5 class="delicate text-center text-muted"><%= category.title %></h5>
-      </div></a>
+      </div>
+      <a href="<%= category_path(category.id) %>" class="subtle"><div class="overlay white opaque"></div></a>
     </div>
 
       <% if session[:admin] %>
