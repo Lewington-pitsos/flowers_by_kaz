@@ -1,21 +1,13 @@
 <div class="row covers">
   <% @works.each do |work| %>
 
-    <div class="col-sm-6 col-md-4 covers-col">
-      <div class="work-cover-wrapper d-flex flex-column align-items-center">
-        <div class="work-cover z-depth-5">
-          <a href="<%= work_path(work.id) %>"><img src="<%= work.image.url %>" class="img-fluid" alt="Responsive image"></a>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6 col-7">
-            <div class="containter-fluid work-description cover">
-              <h5><%= work.title %></h5>
-              <p><%= work.caption %></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="col-sm-3 covers-col">
+    <a href="<%= work_path(work.id) %>" class="subtle"><div class="container-fluid position-relative p-0">
+      <div class="overlay white opaque"></div>
+      <%= image_tag work.image.url, class: "img-fluid" %>
+      <h5 class="delicate text-center text-muted"><%= work.title %></h5>
+    </div></a>
+  </div>
 
   <% end %>
 </div>
