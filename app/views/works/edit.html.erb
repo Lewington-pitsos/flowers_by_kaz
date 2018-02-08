@@ -1,0 +1,35 @@
+<h1>Edit Artwork</h1>
+
+<%= form_for @work do |f| %>
+  <%= f.label 'Work Name:' %>
+  <%= f.text_field :title %>
+  <br />
+
+  <%= f.label 'Image:' %>
+  <%= f.file_field :image %>
+  <br />
+
+  <%= f.label 'Medium:' %>
+  <%= f.text_area :medium %>
+  <br /><br />
+
+  <%= f.label 'Size' %>
+  <%= f.text_area :size %>
+  <br /><br />
+
+  <%= f.label 'Year' %>
+  <%= f.text_area :year %>
+  <br /><br />
+
+  <%= f.label 'Caption:' %>
+  <%= f.text_area :caption %>
+  <br /><br />
+
+  <%= f.label 'Place (1 = first place, 2 = second, etc...):' %>
+  <%= f.number_field :place, value: @work.position %>
+  <br /><br />
+
+  <%= f.submit 'Save changes' %>
+<% end %>
+
+<%= link_to 'Back to gallery', work_path(@work.id) %>

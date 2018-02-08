@@ -1,0 +1,51 @@
+<div class="col-12 covers-col">
+  <div class="work-wrapper d-flex flex-column align-items-center">
+    <div class="work-image z-depth-5">
+      <img src="<%= @work.image.url %>" class="img-fluid work" alt="Responsive image">
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-10 col-12">
+        <div class="containter-fluid work-description work">
+          <h5><%= @work.title %></h5>
+          <table>
+            <tbody>
+              <tr>
+                <td class="font-weight-bold">
+                  Medium:
+                </td>
+                <td>
+                  <%= @work.medium %>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-weight-bold">
+                  Dimensions:
+                </td>
+                <td>
+                  <%= @work.size %>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-weight-bold">
+                  Year
+                </td>
+                <td>
+                  <%= @work.year %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p><%= @work.caption %></p>
+          <% if session[:admin] %>
+             <%= button_to 'Delete', "/works/#{@work.id}", method: :delete %>
+             <%= button_to 'Edit', edit_work_path(@work.id), method: :get %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid fixed-bottom slider fadein p-3 text-center">
+  <h3><%= link_to "Return To #{@work.category.title}", category_path(@work.category.id), class: 'nav-link' %></h3>
+</div>
