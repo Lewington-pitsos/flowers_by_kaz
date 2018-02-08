@@ -2,9 +2,7 @@
   <% @categories.each do |category| %>
 
     <div class="col-md-3 col-sm-4 col-6 covers-col position-relative p-2">
-      <div class="container-fluid p-0" style="background: url(<%= image_url(category.image.url) %>)">
-        <div class="square-img-wrapper"></div>
-      </div>
+      <div class="square-img-wrapper" style="background-image: url(<%= image_url(category.image.url) %>)"></div>
       <div class="container-fluid pt-1">
         <h5 class="delicate text-center text-muted"><%= category.title %></h5>
       </div>
