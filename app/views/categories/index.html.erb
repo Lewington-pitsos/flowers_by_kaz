@@ -2,10 +2,10 @@
   <% @categories.each do |category| %>
 
     <div class="col-sm-3 covers-col">
-      <a href="<%= category_path(category.id) %>"><div class="container-fluid position-relative p-0">
-        <%= image_tag category.image.url, class: "img-fluid" %>
-        <h5 class="delicate text-center text-muted muted-link"><%= category.title %></h5>
+      <a href="<%= category_path(category.id) %>" class="subtle"><div class="container-fluid position-relative p-0">
         <div class="overlay white opaque"></div>
+        <%= image_tag category.image.url, class: "img-fluid" %>
+        <h5 class="delicate text-center text-muted"><%= category.title %></h5>
       </div></a>
 
     </div>
@@ -14,8 +14,6 @@
         <%= button_to 'Delete', "/categories/#{category.id}", method: :delete %>
         <%= button_to 'Edit', edit_category_path(category.id), method: :get %>
       <% end %>
-
-    </div>
 
   <% end %>
 </div>

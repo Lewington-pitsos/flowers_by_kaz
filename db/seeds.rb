@@ -21,9 +21,17 @@ admin = Admin.new({
 
 admin.save
 
-paintings = Category.new({title: 'bouqets', image: nil, place: 2})
-prints = Category.new({title: 'something', image: nil, place: 1})
+paintings = Category.new({title: 'Bouqets', image: nil, place: 2})
+prints = Category.new({title: 'Bomething', image: nil, place: 1})
+prints2 = Category.new({title: 'Something', image: nil, place: 3})
+prints3 = Category.new({title: 'something', image: nil, place: 4})
+prints4 = Category.new({title: 'something', image: nil, place: 5})
+prints5 = Category.new({title: 'something', image: nil, place: 6})
 prints.save
+prints2.save
+prints3.save
+prints4.save
+prints5.save
 paintings.save
 
 
