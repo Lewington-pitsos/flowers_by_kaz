@@ -1,0 +1,18 @@
+<h1>Admin Sign in</h1>
+
+<%= form_for @admin do |f| %>
+  <%= f.label 'Username:' %>
+  <%= f.text_field :username %>
+  <br />
+  <%= f.label 'Password:' %>
+  <%= f.password_field :password %>
+  <br />
+
+  <%= f.label 'Stay Signed in?' %>
+  <%= f.check_box :stay_signed_in, :checked => true %>
+  <br />
+
+  <%= f.submit 'Sign in' %>
+<% end %>
+
+<%= link_to 'back to gallery', categories_path %>

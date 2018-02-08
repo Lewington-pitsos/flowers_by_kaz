@@ -6,6 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+password = 'q1as1z2'
+
+salt = Digest::SHA1.hexdigest("#{password}--#{Time.now} as random value")
+
+e_pass = Digest::SHA1.hexdigest("#{salt}--#{password}")
+
+
+admin = Admin.new({
+    username: 'louka',
+    encrypted_pass: e_pass,
+    salt: salt
+  })
+
+admin.save
 
 paintings = Category.new({title: 'bouqets', image: nil, place: 2})
 prints = Category.new({title: 'something', image: nil, place: 1})
