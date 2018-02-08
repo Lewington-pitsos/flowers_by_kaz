@@ -6076,3 +6076,393 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.5ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5011.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fbk_development"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (119.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fbk_development"[0m
+  [1m[35m (121.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fbk_test"[0m
+  [1m[35m (272.7ms)[0m  [1m[35mCREATE DATABASE "fbk_development" ENCODING = 'unicode'[0m
+  [1m[35m (265.8ms)[0m  [1m[35mCREATE DATABASE "fbk_test" ENCODING = 'unicode'[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7377026410931621220)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20180207224445)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "title" character varying NOT NULL, "image" character varying, "position" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180207224445"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateWorks (20180207224702)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "works" ("id" bigserial primary key, "title" character varying NOT NULL, "size" character varying, "medium" character varying, "caption" character varying, "image" character varying, "category_id" integer, "position" integer, "year" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_works_on_category_id" ON "works"  ("category_id")[0m
+  [1m[35m (6.3ms)[0m  [1m[35mALTER TABLE "works" ADD CONSTRAINT "fk_rails_c5bab402b7"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180207224702"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-08 08:07:22.698708"], ["updated_at", "2018-02-08 08:07:22.698708"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7377026410931621220)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/categories/3" for 127.0.0.1 at 2018-02-08 19:07:55 +1100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::AdminsHelper):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/categories_controller.rb:1:in `<top (required)>'
+Started GET "/categories/3/works/new" for 127.0.0.1 at 2018-02-08 19:08:26 +1100
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::AdminsHelper):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/works_controller.rb:1:in `<top (required)>'
+Started GET "/categories/3/works/new" for 127.0.0.1 at 2018-02-08 19:08:46 +1100
+Processing by WorksController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 16ms (ActiveRecord: 3.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=3):
+  
+app/controllers/works_controller.rb:12:in `new'
+Started GET "/categories/1/works/new" for 127.0.0.1 at 2018-02-08 19:09:07 +1100
+Processing by WorksController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (2.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 2.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=1):
+  
+app/controllers/works_controller.rb:12:in `new'
+Started GET "/categories/" for 127.0.0.1 at 2018-02-08 19:09:13 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_head.html.erb (197.1ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 217ms (Views: 210.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-08 19:09:16 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (8.7ms)
+  Rendered shared/_head.html.erb (57.7ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 86ms (Views: 79.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-08 19:09:18 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (8.6ms)
+  Rendered shared/_head.html.erb (106.6ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 135ms (Views: 128.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-08 19:09:19 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (11.7ms)
+  Rendered shared/_head.html.erb (85.0ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 125ms (Views: 118.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-02-08 19:09:25 +1100
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (10.6ms)
+  Rendered shared/_head.html.erb (44.0ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 81ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-02-08 19:09:28 +1100
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7MBUb6VT9Md8nUYr7J3MU6q94Qd6BQ2zY/NatnXJ6DOlKg6Fdi0MC+tG1DZJSYqwDwnoRcmc01vbseCjp9Z3oQ==", "category"=>{"title"=>"dvxdffg", "place"=>"1"}, "commit"=>"Create"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "dvxdffg"], ["created_at", "2018-02-08 08:09:28.102441"], ["updated_at", "2018-02-08 08:09:28.102441"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "categories" SET "position" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-08 08:09:28.128894"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 45ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-08 19:09:28 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (5.1ms)
+  Rendered shared/_head.html.erb (38.3ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 19:09:29 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (2.8ms)
+  Rendered shared/_head.html.erb (38.4ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 122ms (Views: 46.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/categories/1/works/new" for 127.0.0.1 at 2018-02-08 19:09:37 +1100
+Processing by WorksController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/new.html.erb within layouts/application (6.8ms)
+  Rendered shared/_head.html.erb (33.2ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (2.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 47.0ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/categories/1/works" for 127.0.0.1 at 2018-02-08 19:09:50 +1100
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"piYYV3W8HZcQ9It5CTwsS62N1qnUGurc8QUHo9a89cPvzEK9psLlW4cvGWSs6GqoCDnf62eDNDRJR722BKNqUQ==", "work"=>{"title"=>"dfdsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055e9fad8d030 @tempfile=#<Tempfile:/tmp/RackMultipart20180208-4523-g1qigp.JPG>, @original_filename="blossems.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"work[image]\"; filename=\"blossems.JPG\"\r\nContent-Type: image/jpeg\r\n">, "medium"=>"gdff", "size"=>"dfg", "year"=>"dfg", "caption"=>"df", "place"=>"1"}, "commit"=>"Upload", "category_id"=>"1"}
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "works" ("title", "size", "medium", "caption", "image", "category_id", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "dfdsf"], ["size", "dfg"], ["medium", "gdff"], ["caption", "df"], ["image", "blossems.JPG"], ["category_id", 1], ["year", 0], ["created_at", "2018-02-08 08:09:50.401242"], ["updated_at", "2018-02-08 08:09:50.401242"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 1], ["position", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-08 08:09:50.410030"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 47ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 19:09:50 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (2.4ms)
+  Rendered shared/_head.html.erb (35.9ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/1/works/new" for 127.0.0.1 at 2018-02-08 19:10:03 +1100
+Processing by WorksController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/new.html.erb within layouts/application (17.6ms)
+  Rendered shared/_head.html.erb (56.7ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 100ms (Views: 90.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/categories/1/works" for 127.0.0.1 at 2018-02-08 19:10:13 +1100
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qULYWztDC+XirN0Qf3ptU2dq5Pdr/T5K0MBZnU6lJ07gqIKx6D3zKXV3Tw3ariuwwt7ttdhk4KJoguOInLq43A==", "work"=>{"title"=>"bbbbb", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f858e33c0f0 @tempfile=#<Tempfile:/tmp/RackMultipart20180208-4523-o8jdxh.jpg>, @original_filename="tree_stump.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"work[image]\"; filename=\"tree_stump.jpg\"\r\nContent-Type: image/jpeg\r\n">, "medium"=>"fgf", "size"=>"gf", "year"=>"gfd", "caption"=>"dg", "place"=>"1"}, "commit"=>"Upload", "category_id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "works" ("title", "size", "medium", "caption", "image", "category_id", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "bbbbb"], ["size", "gf"], ["medium", "fgf"], ["caption", "dg"], ["image", "tree_stump.jpg"], ["category_id", 1], ["year", 0], ["created_at", "2018-02-08 08:10:13.686038"], ["updated_at", "2018-02-08 08:10:13.686038"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 1], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 1], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 1], ["position", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-08 08:10:13.701483"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-08 08:10:13.705884"], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 32ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 19:10:13 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (2.3ms)
+  Rendered shared/_head.html.erb (37.5ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/works/2" for 127.0.0.1 at 2018-02-08 19:10:17 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWork Load (1.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (13.8ms)
+  Rendered shared/_head.html.erb (64.2ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 113ms (Views: 98.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/categories/1/works/edit/1" for 127.0.0.1 at 2018-02-08 19:10:57 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-08 19:10:57 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.6ms)
+  Rendered shared/_head.html.erb (48.6ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/works/edit/1" for 127.0.0.1 at 2018-02-08 19:12:52 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-08 19:12:52 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered shared/_head.html.erb (44.5ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-08 19:13:09 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (3.1ms)
+  Rendered shared/_head.html.erb (60.5ms)
+  Rendered shared/_nav_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 19:13:11 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.9ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (14.5ms)
+  Rendered shared/_head.html.erb (81.9ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 128ms (Views: 109.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-02-08 19:13:18 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (12.1ms)
+  Rendered shared/_head.html.erb (66.9ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 100ms (Views: 89.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2018-02-08 19:13:22 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/edit.html.erb within layouts/application (6.1ms)
+  Rendered shared/_head.html.erb (56.9ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 75ms (Views: 69.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/works/1" for 127.0.0.1 at 2018-02-08 19:13:31 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h0QMidE4BDe4wjVQ6CshfG2F5FnTQC+46hTo1LZxVmjOrlZjAkb8+y8Zp01N/2efyDHtG2DZ8VBSVlLBZG7J+g==", "work"=>{"title"=>"ddddddddddddddd", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f859431dc30 @tempfile=#<Tempfile:/tmp/RackMultipart20180208-4523-v8qghq.png>, @original_filename="fbc_logo.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"work[image]\"; filename=\"fbc_logo.png\"\r\nContent-Type: image/png\r\n">, "medium"=>"gdff", "size"=>"dfg", "year"=>"0", "caption"=>"df", "place"=>"2"}, "commit"=>"Save changes", "id"=>"1"}
+  [1m[36mWork Load (1.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "works" SET "title" = $1, "image" = $2, "updated_at" = $3 WHERE "works"."id" = $4[0m  [["title", "ddddddddddddddd"], ["image", "fbc_logo.png"], ["updated_at", "2018-02-08 08:13:31.837313"], ["id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 1], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Load (1.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 1], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 1], ["position", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-08 08:13:31.858516"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 54ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 19:13:31 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (5.0ms)
+  Rendered shared/_head.html.erb (58.3ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 75ms (Views: 70.1ms | ActiveRecord: 1.0ms)
+
+

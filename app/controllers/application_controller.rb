@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  include AdminsHelper
-  # include WorksHelper
+  # include AdminsHelper
+  include WorksHelper
   include CategoriesHelper
 end
