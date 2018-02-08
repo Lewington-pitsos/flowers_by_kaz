@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :admins
 
   resources :categories do
     resource :works, only: [:index, :new, :create]
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
   get '/about' => 'about#index', as: :about
 
   get '/services' => 'services#index', as: :services
+
+  root 'admins#authorize', as: 'authorize'
 
   get '/contact' => 'contact#index', as: :contact
 

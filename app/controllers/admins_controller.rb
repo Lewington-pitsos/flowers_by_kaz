@@ -27,7 +27,7 @@ class AdminsController < ApplicationController
     if admin && admin.tokens_match(cookies[:auth_token])
       sign_in(admin)
     end
-    redirect_to front_path
+    redirect_to home_path
   end
 
   private
