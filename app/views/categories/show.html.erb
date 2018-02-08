@@ -4,12 +4,14 @@
   <div class="col-sm-3 covers-col">
     <a href="<%= work_path(work.id) %>" class="subtle"><div class="container-fluid position-relative p-0">
       <div class="overlay white opaque"></div>
-      <%= image_tag work.image.url, class: "img-fluid" %>
+      <div class="square-img-wrapper" style="background-image: image-url(assets/images/<%= work.image.url %>);">
+      </div>
       <h5 class="delicate text-center text-muted"><%= work.title %></h5>
     </div></a>
   </div>
 
   <% end %>
+
 </div>
 <div class="row breadcrumbs">
   <div class="col-12">
