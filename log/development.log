@@ -9116,3 +9116,974 @@ Processing by CategoriesController#show as HTML
 Completed 200 OK in 95ms (Views: 81.7ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-08 22:59:21 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#authorize as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "louka"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 23ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 22:59:21 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (212.6ms)
+  Rendered shared/_head.html.erb (56.5ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 280ms (Views: 278.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-02-08 22:59:24 +1100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (12.5ms)
+  Rendered shared/_head.html.erb (53.9ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 92ms (Views: 87.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-08 22:59:26 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (5.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (41.8ms)
+  Rendered shared/_head.html.erb (41.4ms)
+  Rendered shared/_logo.html.erb (1.5ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 146ms (Views: 87.0ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2018-02-08 22:59:27 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 2]]
+  Rendered categories/show.html.erb within layouts/application (3.0ms)
+  Rendered shared/_head.html.erb (48.3ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 124ms (Views: 58.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-08 22:59:30 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (37.8ms)
+  Rendered shared/_head.html.erb (64.4ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 123ms (Views: 115.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 22:59:30 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (29.9ms)
+  Rendered shared/_head.html.erb (54.9ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 109ms (Views: 92.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/categories/assets/images/default_work.jpg" for 127.0.0.1 at 2018-02-08 22:59:30 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-08 22:59:30 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered shared/_head.html.erb (52.4ms)
+  Rendered shared/_logo.html.erb (1.4ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 22:59:55 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (4.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (6.1ms)
+  Rendered shared/_head.html.erb (60.4ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 95ms (Views: 78.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/categories/assets/images/default_work.jpg" for 127.0.0.1 at 2018-02-08 22:59:55 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-08 22:59:55 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  Rendered shared/_head.html.erb (50.1ms)
+  Rendered shared/_logo.html.erb (1.1ms)
+  Rendered shared/_nav_bar.html.erb (0.9ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 22:59:56 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (10.0ms)
+  Rendered shared/_head.html.erb (57.9ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 97ms (Views: 81.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/categories/assets/images/default_work.jpg" for 127.0.0.1 at 2018-02-08 22:59:57 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-08 22:59:57 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered shared/_head.html.erb (61.6ms)
+  Rendered shared/_logo.html.erb (1.1ms)
+  Rendered shared/_nav_bar.html.erb (1.2ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 22:59:57 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (3.8ms)
+  Rendered shared/_head.html.erb (49.2ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 59.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/assets/images/default_work.jpg" for 127.0.0.1 at 2018-02-08 22:59:57 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-08 22:59:58 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered shared/_head.html.erb (59.4ms)
+  Rendered shared/_logo.html.erb (1.1ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 70ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:02:52 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.9ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (10.1ms)
+  Rendered shared/_head.html.erb (2148.2ms)
+Completed 500 Internal Server Error in 2185ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "image-url(blossems": expected ")", was ".JPG)"):
+    1: <title>FlowersByKaz</title>
+    2: <%= csrf_meta_tags %>
+    3: 
+    4: <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    5: <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    6: <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
+app/assets/stylesheets/main.sass:128
+app/views/shared/_head.html.erb:4:in `_app_views_shared__head_html_erb__3278678444446162865_70279311436820'
+app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___294201200446466142_70279311512860'
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:03:16 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.7ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (8.7ms)
+  Rendered shared/_head.html.erb (3232.7ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 3272ms (Views: 3261.8ms | ActiveRecord: 2.1ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "admins" ("username", "encrypted_pass", "salt", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "louka"], ["encrypted_pass", "dfe3a3acc4d0c38b78d22486032d1c38b1b0fc8d"], ["salt", "8fe59b85819c24ca33187e57459e8c4e6d22fdbe"], ["created_at", "2018-02-08 12:06:46.625256"], ["updated_at", "2018-02-08 12:06:46.625256"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Bomething"], ["created_at", "2018-02-08 12:06:46.638871"], ["updated_at", "2018-02-08 12:06:46.638871"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Something"], ["created_at", "2018-02-08 12:06:46.641914"], ["updated_at", "2018-02-08 12:06:46.641914"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "something"], ["created_at", "2018-02-08 12:06:46.644303"], ["updated_at", "2018-02-08 12:06:46.644303"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "something"], ["created_at", "2018-02-08 12:06:46.646709"], ["updated_at", "2018-02-08 12:06:46.646709"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "something"], ["created_at", "2018-02-08 12:06:46.649215"], ["updated_at", "2018-02-08 12:06:46.649215"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Bouqets"], ["created_at", "2018-02-08 12:06:46.651637"], ["updated_at", "2018-02-08 12:06:46.651637"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art1"], ["caption", "erving first as navy minister and then as agriculture minister; the first professional firefighter corps in Brazil was formed during his tenure. In late 1866 he was appointed commander-in-chief of the fleet engaged in the Paraguayan War, and achieved the rank of admiral. Although historical works have not given much coverage to Inhaúma, some historians regard him among the greatest of the Brazilian navy officers. (Full article...)"], ["category_id", 1], ["position", 3], ["created_at", "2018-02-08 12:06:46.677081"], ["updated_at", "2018-02-08 12:06:46.677081"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art2"], ["caption", "Mohammad bin Salman (pictured), more than 40 senior Saudi princes and ministers are arrested on corruption charges."], ["category_id", 1], ["position", 2], ["created_at", "2018-02-08 12:06:46.681932"], ["updated_at", "2018-02-08 12:06:46.681932"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art3"], ["caption", "civilians destroyed and ransacked Jewish homes, businesses and synagogues in Germany and Austria, resulting in at least 90 deaths and the deportation of over 30,000 others to concentration camps."], ["category_id", 1], ["position", 1], ["created_at", "2018-02-08 12:06:46.685507"], ["updated_at", "2018-02-08 12:06:46.685507"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("username", "encrypted_pass", "salt", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "louka"], ["encrypted_pass", "5928997256cb0ff44160e245d8eda68cf58e5e93"], ["salt", "e6f51303ba4ad8df39adf5b0462582b8ea253689"], ["created_at", "2018-02-08 12:07:15.928670"], ["updated_at", "2018-02-08 12:07:15.928670"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Bomething"], ["created_at", "2018-02-08 12:07:15.943063"], ["updated_at", "2018-02-08 12:07:15.943063"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Something"], ["created_at", "2018-02-08 12:07:15.945696"], ["updated_at", "2018-02-08 12:07:15.945696"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "something"], ["created_at", "2018-02-08 12:07:15.948128"], ["updated_at", "2018-02-08 12:07:15.948128"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "something"], ["created_at", "2018-02-08 12:07:15.950522"], ["updated_at", "2018-02-08 12:07:15.950522"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "something"], ["created_at", "2018-02-08 12:07:15.952988"], ["updated_at", "2018-02-08 12:07:15.952988"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Bouqets"], ["created_at", "2018-02-08 12:07:15.955359"], ["updated_at", "2018-02-08 12:07:15.955359"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art1"], ["caption", "erving first as navy minister and then as agriculture minister; the first professional firefighter corps in Brazil was formed during his tenure. In late 1866 he was appointed commander-in-chief of the fleet engaged in the Paraguayan War, and achieved the rank of admiral. Although historical works have not given much coverage to Inhaúma, some historians regard him among the greatest of the Brazilian navy officers. (Full article...)"], ["category_id", 1], ["position", 3], ["created_at", "2018-02-08 12:07:15.980482"], ["updated_at", "2018-02-08 12:07:15.980482"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art2"], ["caption", "Mohammad bin Salman (pictured), more than 40 senior Saudi princes and ministers are arrested on corruption charges."], ["category_id", 1], ["position", 2], ["created_at", "2018-02-08 12:07:15.984534"], ["updated_at", "2018-02-08 12:07:15.984534"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art3"], ["caption", "civilians destroyed and ransacked Jewish homes, businesses and synagogues in Germany and Austria, resulting in at least 90 deaths and the deportation of over 30,000 others to concentration camps."], ["category_id", 1], ["position", 1], ["created_at", "2018-02-08 12:07:15.988065"], ["updated_at", "2018-02-08 12:07:15.988065"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art3"], ["caption", "civilians destroyed and ransacked Jewish homes, businesses and synagogues in Germany and Austria, resulting in at least 90 deaths and the deportation of over 30,000 others to concentration camps."], ["category_id", 1], ["position", 4], ["created_at", "2018-02-08 12:07:15.991639"], ["updated_at", "2018-02-08 12:07:15.991639"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art3"], ["caption", "civilians destroyed and ransacked Jewish homes, businesses and synagogues in Germany and Austria, resulting in at least 90 deaths and the deportation of over 30,000 others to concentration camps."], ["category_id", 1], ["position", 5], ["created_at", "2018-02-08 12:07:15.994945"], ["updated_at", "2018-02-08 12:07:15.994945"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art3"], ["caption", "civilians destroyed and ransacked Jewish homes, businesses and synagogues in Germany and Austria, resulting in at least 90 deaths and the deportation of over 30,000 others to concentration camps."], ["category_id", 1], ["position", 6], ["created_at", "2018-02-08 12:07:15.998412"], ["updated_at", "2018-02-08 12:07:15.998412"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art3"], ["caption", "civilians destroyed and ransacked Jewish homes, businesses and synagogues in Germany and Austria, resulting in at least 90 deaths and the deportation of over 30,000 others to concentration camps."], ["category_id", 1], ["position", 7], ["created_at", "2018-02-08 12:07:16.001724"], ["updated_at", "2018-02-08 12:07:16.001724"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art3"], ["caption", "civilians destroyed and ransacked Jewish homes, businesses and synagogues in Germany and Austria, resulting in at least 90 deaths and the deportation of over 30,000 others to concentration camps."], ["category_id", 1], ["position", 8], ["created_at", "2018-02-08 12:07:16.005033"], ["updated_at", "2018-02-08 12:07:16.005033"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "art3"], ["caption", "civilians destroyed and ransacked Jewish homes, businesses and synagogues in Germany and Austria, resulting in at least 90 deaths and the deportation of over 30,000 others to concentration camps."], ["category_id", 1], ["position", 9], ["created_at", "2018-02-08 12:07:16.008661"], ["updated_at", "2018-02-08 12:07:16.008661"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:07:18 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (4.6ms)
+  Rendered shared/_head.html.erb (52.6ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 68ms (Views: 63.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:07:53 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (5.8ms)
+  Rendered shared/_head.html.erb (63.9ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 85ms (Views: 78.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:08:35 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (7.5ms)
+  Rendered shared/_head.html.erb (59.3ms)
+  Rendered shared/_logo.html.erb (0.6ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 88ms (Views: 76.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:09:00 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (8.3ms)
+  Rendered shared/_head.html.erb (53.3ms)
+  Rendered shared/_logo.html.erb (1.3ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 109ms (Views: 73.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:09:31 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (7.8ms)
+  Rendered shared/_head.html.erb (52.3ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 70.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:09:41 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.1ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (9.9ms)
+  Rendered shared/_head.html.erb (60.1ms)
+  Rendered shared/_logo.html.erb (1.5ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 100ms (Views: 86.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:09:50 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (7.2ms)
+  Rendered shared/_head.html.erb (55.8ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 83ms (Views: 73.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:10:18 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (4.6ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (22.1ms)
+  Rendered shared/_head.html.erb (73.8ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (1.0ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 127ms (Views: 110.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:10:26 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (16.5ms)
+  Rendered shared/_head.html.erb (74.1ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 121ms (Views: 107.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:10:31 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.7ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (16.8ms)
+  Rendered shared/_head.html.erb (63.8ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 108ms (Views: 95.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:10:54 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.9ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (16.9ms)
+  Rendered shared/_head.html.erb (73.4ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 101.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:11:36 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (9.1ms)
+  Rendered shared/_head.html.erb (55.8ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 92ms (Views: 76.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:11:51 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (2.7ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (15.4ms)
+  Rendered shared/_head.html.erb (57.3ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 99ms (Views: 83.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:12:04 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (2.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (17.0ms)
+  Rendered shared/_head.html.erb (84.3ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 131ms (Views: 116.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:12:50 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (5.7ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (14.8ms)
+  Rendered shared/_head.html.erb (56.4ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 96ms (Views: 78.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:13:57 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (7.7ms)
+  Rendered shared/_head.html.erb (53.2ms)
+  Rendered shared/_logo.html.erb (1.1ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 75ms (Views: 68.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:14:14 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (22.1ms)
+  Rendered shared/_head.html.erb (76.8ms)
+  Rendered shared/_logo.html.erb (1.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 133ms (Views: 116.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:14:26 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (15.6ms)
+  Rendered shared/_head.html.erb (54.1ms)
+  Rendered shared/_logo.html.erb (1.2ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 98ms (Views: 84.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:14:42 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (17.7ms)
+  Rendered shared/_head.html.erb (52.3ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 115ms (Views: 101.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:14:46 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (18.6ms)
+  Rendered shared/_head.html.erb (73.4ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 120ms (Views: 107.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:15:20 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (14.6ms)
+  Rendered shared/_head.html.erb (57.3ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 102ms (Views: 84.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:15:46 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (7.7ms)
+  Rendered shared/_head.html.erb (54.6ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 84ms (Views: 72.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:15:52 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (13.7ms)
+  Rendered shared/_head.html.erb (52.2ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 79.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:16:05 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.6ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (16.4ms)
+  Rendered shared/_head.html.erb (57.2ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 100ms (Views: 86.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:16:58 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (12.3ms)
+  Rendered shared/_head.html.erb (54.8ms)
+  Rendered shared/_logo.html.erb (1.2ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 95ms (Views: 80.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:17:08 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (2.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (18.5ms)
+  Rendered shared/_head.html.erb (90.1ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 134ms (Views: 122.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:17:42 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (6.1ms)
+  Rendered shared/_head.html.erb (65.0ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 92ms (Views: 79.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:20:03 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (16.7ms)
+  Rendered shared/_head.html.erb (58.0ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 100ms (Views: 87.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:20:15 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (4.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (13.9ms)
+  Rendered shared/_head.html.erb (68.3ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 91.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:20:57 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (17.8ms)
+  Rendered shared/_head.html.erb (59.9ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 103ms (Views: 92.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:21:18 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (17.3ms)
+  Rendered shared/_head.html.erb (58.2ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 104ms (Views: 92.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:21:42 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (7.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (21.8ms)
+  Rendered shared/_head.html.erb (56.6ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 104ms (Views: 85.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-02-08 23:22:32 +1100
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (5.6ms)
+  Rendered shared/_head.html.erb (60.5ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 87ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-08 23:22:38 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.8ms)
+  Rendered shared/_head.html.erb (101.7ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 127.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-02-08 23:22:40 +1100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (16.6ms)
+  Rendered shared/_head.html.erb (74.0ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 114ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-02-08 23:22:45 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (1.9ms)
+  Rendered shared/_head.html.erb (98.9ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 125ms (Views: 119.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-02-08 23:22:46 +1100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (6.7ms)
+  Rendered shared/_head.html.erb (71.1ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 95ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-08 23:22:47 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (50.5ms)
+  Rendered shared/_head.html.erb (71.2ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 145ms (Views: 138.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2018-02-08 23:22:50 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 2]]
+  Rendered categories/show.html.erb within layouts/application (8.1ms)
+  Rendered shared/_head.html.erb (77.8ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 118ms (Views: 103.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-08 23:22:52 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (51.5ms)
+  Rendered shared/_head.html.erb (81.3ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 155ms (Views: 148.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:22:53 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (8.3ms)
+  Rendered shared/_head.html.erb (56.6ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 86.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:23:48 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (4.6ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (17.1ms)
+  Rendered shared/_head.html.erb (3203.3ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 3248ms (Views: 3230.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:24:02 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (14.6ms)
+  Rendered shared/_head.html.erb (3418.5ms)
+  Rendered shared/_logo.html.erb (1.3ms)
+  Rendered shared/_nav_bar.html.erb (0.9ms)
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 3466ms (Views: 3452.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:24:22 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.9ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (16.2ms)
+  Rendered shared/_head.html.erb (3264.0ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 3310ms (Views: 3295.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2018-02-08 23:25:10 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (2.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (12.3ms)
+  Rendered shared/_head.html.erb (3298.4ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 3336ms (Views: 3322.6ms | ActiveRecord: 3.1ms)
+
+
