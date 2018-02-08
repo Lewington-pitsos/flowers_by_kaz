@@ -11,10 +11,13 @@
 
   <% end %>
 </div>
-
-<div class="container-fluid fixed-bottom slider fadein p-3 text-center">
-  <h3><%= link_to "Return Home", categories_path, class: 'nav-link' %></h3>
-  <% if session[:admin] %>
-    <%= link_to "Upload new artwork to #{@category.title}", new_category_works_path(@category.id) %>
-  <% end %>
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <a href="<%= categories_path%>" class="subtle text-muted"><h6 class="delicate text-uppercase">Return to Portfolio</h6></a>
+    <% if session[:admin] %>
+      <div class="row breadcrumbs">
+        <%= link_to "Upload new artwork to #{@category.title}", new_category_works_path(@category.id) %>
+      </div>
+    <% end %>
+  </div>
 </div>
