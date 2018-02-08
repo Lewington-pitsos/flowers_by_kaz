@@ -8,7 +8,9 @@
     <%= render '/shared/logo' %>
     <main>
       <%= render '/shared/header' %>
-      <%= yield %>
+      <div class="content-wrapper">
+        <%= yield %>
+      </div>
     </main>
     <%= render './shared/footer' %>
   </body>
