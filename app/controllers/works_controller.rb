@@ -55,6 +55,6 @@ class WorksController < ApplicationController
   end
 
   def image_info
-    params.require(:work).permit(:title, :image, :caption, :place, :medium, :size, :year)
+    params.require(:work).permit(:title, :image, :caption, :place)
   end
 end
