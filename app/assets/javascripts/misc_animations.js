@@ -24,10 +24,10 @@ function fadeInIfVisible(elements) {
 $(window).on('turbolinks:load', function() {
 
   // fades in (and then out) overlays when moused over
-  $('.opaque.hover-reveal').on('mouseover', function(event) {
+  $('.content-wrapper').on('mouseover', '.opaque.hover-reveal', function(event) {
     $(event.target).fadeTo(300, 1);
   })
-  $('.opaque.hover-reveal').on('mouseleave', function(event) {
+  $('.content-wrapper').on('mouseleave', '.opaque.hover-reveal', function(event) {
     $(event.target).fadeTo(300, 0);
   })
 
@@ -40,4 +40,9 @@ $(window).on('turbolinks:load', function() {
       fadeInIfVisible(hiddenServiceElements);
     });
   }
+
+  $('.work-overlay').on('click', function(e) {
+    e.preventDefault()
+    $('.work-show').css('display', 'block');
+  })
 })
