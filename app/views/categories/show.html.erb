@@ -26,7 +26,13 @@
 
 <div class="overlay black opaque hidden work-show text-light">
   <div class="work-overlay-clear">
-    <i class="fa fa-times-circle"></i>
+    <i class="fa fa-times"></i>
   </div>
-  <h1>FUCK YOUs</h1>
+  <div class="container-fluid">
+    <div class="row align-items-center justify-content-center flex-column" id="work-holder">
+      <div class="col-md-6">
+        <%= image_tag @works[1].image.url, class: 'img-fluid' %>
+      </div>
+    </div>
+  </div>
 </div>
