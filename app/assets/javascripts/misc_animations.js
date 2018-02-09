@@ -24,15 +24,15 @@ function fadeInIfVisible(elements) {
 $(window).on('turbolinks:load', function() {
 
   // fades in (and then out) overlays when moused over
-  $('.opaque').on('mouseover', function(event) {
+  $('.opaque.hover-reveal').on('mouseover', function(event) {
     $(event.target).fadeTo(300, 1);
   })
-  $('.opaque').on('mouseleave', function(event) {
+  $('.opaque.hover-reveal').on('mouseleave', function(event) {
     $(event.target).fadeTo(300, 0);
   })
 
   // if elligable elements exist, on every scroll event we check if certain elements are in view, and fade them in if they are visible
-  var hiddenServiceElements = $('.service.hidden');
+  var hiddenServiceElements = $('.service.opaque');
   if (hiddenServiceElements.length) {
     fadeInIfVisible(hiddenServiceElements);
 

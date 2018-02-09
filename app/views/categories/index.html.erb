@@ -6,7 +6,7 @@
       <div class="container-fluid pt-1">
         <h5 class="delicate text-center text-muted"><%= category.title %></h5>
       </div>
-      <a href="<%= category_path(category.id) %>" class="subtle"><div class="overlay white opaque"></div></a>
+      <a href="<%= category_path(category.id) %>" class="subtle"><div class="overlay white opaque hover-reveal"></div></a>
     </div>
 
       <% if session[:admin] %>

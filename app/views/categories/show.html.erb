@@ -1,10 +1,9 @@
-
 <div class="row covers">
   <% @works.each do |work| %>
 
   <div class="col-lg-2 col-md-3 col-sm-4 col-6 covers-col p-1">
     <a href="<%= work_path(work.id) %>" class="subtle"><div class="container-fluid position-relative p-0">
-      <div class="overlay white opaque"></div>
+      <div class="overlay white opaque hover-reveal"></div>
       <div class="square-img-wrapper" style="background-image: url(<%= image_url(work.image.url) %>)">
       </div>
     </div></a>
@@ -23,4 +22,8 @@
       </div>
     <% end %>
   </div>
+</div>
+
+<div class="overlay white">
+
 </div>
