@@ -28,10 +28,20 @@
   <div class="work-overlay-clear">
     <i class="fa fa-times"></i>
   </div>
-  <div class="container-fluid">
-    <div class="row align-items-center justify-content-center flex-column" id="work-holder">
-      <div class="col-md-6">
+  <div class="container-fluid d-flex align-items-center p-0" id="work-holder">
+    <div class="row justify-content-center align-items-stretch">
+      <div class="col-1 work-nav p-0">
+          <i class="fa fa-angle-left"></i>
+      </div>
+      <div class="col-md-8 col-9 position-relative p-0">
         <%= image_tag @works[1].image.url, class: 'img-fluid' %>
+        <div class="overlay opaque hover-reveal work-overlay" id="work-info">
+          <h5><%= @works[1].title%></h5>
+          <p class="smallish"><%= @works[1].caption %></p>
+        </div>
+      </div>
+      <div class="col-1 work-nav p-0">
+          <i class="fa fa-angle-right"></i>
       </div>
     </div>
   </div>
