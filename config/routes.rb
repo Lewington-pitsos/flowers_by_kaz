@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :works, only: [:show, :edit, :update, :destroy]
 
+  post '/send' => 'contact#send', as: :send
+
   get '/home' => 'home#index', as: :home
 
   get '/about' => 'about#index', as: :about
