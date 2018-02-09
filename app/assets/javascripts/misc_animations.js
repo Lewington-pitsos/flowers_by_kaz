@@ -18,6 +18,13 @@ function fadeInIfVisible(elements) {
   });
 }
 
+function showWork(id) {
+  var work = id
+  $('.work-image').attr('href', image_url(work.image.url));
+  $('.work-title').text(work.title);
+  $('.work-description').text(work.caption);
+}
+
 // for some FUCKED reason you have to reload all javascripts on the 'turbolinks.load' function or else they only work after a page refresh
 
 
@@ -45,6 +52,7 @@ $(window).on('turbolinks:load', function() {
     e.preventDefault()
     $('.work-show').css('display', 'block');
     $('.work-show').fadeTo(500, 1);
+    showWork($(e.target).attr('id'))
   })
 
   $('.work-overlay-clear').on('click', function() {
