@@ -44,5 +44,13 @@ $(window).on('turbolinks:load', function() {
   $('.work-overlay').on('click', function(e) {
     e.preventDefault()
     $('.work-show').css('display', 'block');
+    $('.work-show').fadeTo(500, 1);
   })
+
+  $('.work-overlay-clear').on('click', function() {
+    $('.work-show').fadeTo(500, 0);
+    $('.work-show').css('display', 'none');
+  })
+
+
 })
