@@ -26,6 +26,10 @@ function showWork($element) {
   $('#work-title').text(data.title);
   $('#work-description').text(data.caption);
   $('#work-holder').data('element', data.number)
+
+  // we also fade in the overlay of the selected elemtn in the background
+  $('.work-overlay').fadeTo(300, 0);
+  $element.fadeTo(300, 1);
 }
 
 // for some FUCKED reason you have to reload all javascripts on the 'turbolinks.load' function or else they only work after a page refresh
