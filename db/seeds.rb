@@ -21,6 +21,20 @@ admin = Admin.new({
 
 admin.save
 
+password = 'test123'
+
+salt = Digest::SHA1.hexdigest("#{password}--#{Time.now} as random value")
+
+e_pass = Digest::SHA1.hexdigest("#{salt}--#{password}")
+
+admin2 = Admin.new({
+    username: 'kaz123',
+    encrypted_pass: e_pass,
+    salt: salt
+  })
+
+admin2.save
+
 paintings = Category.new({title: 'Bouqets', image: nil, place: 2})
 prints = Category.new({title: 'Bomething', image: nil, place: 1})
 prints2 = Category.new({title: 'Something', image: nil, place: 3})
