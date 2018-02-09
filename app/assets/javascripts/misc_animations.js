@@ -49,7 +49,9 @@ $(window).on('turbolinks:load', function() {
 
   $('.work-overlay-clear').on('click', function() {
     $('.work-show').fadeTo(500, 0);
-    $('.work-show').css('display', 'none');
+    setTimeout(function() {
+      $('.work-show').css('display', 'none');
+    }, 502)
   })
 
 
