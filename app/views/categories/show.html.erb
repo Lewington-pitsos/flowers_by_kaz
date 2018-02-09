@@ -1,9 +1,9 @@
 <div class="row covers">
   <% @works.each do |work| %>
 
-  <div class="col-lg-2 col-md-3 col-sm-4 col-6 covers-col p-1" id="<%= work.id %>">
+  <div class="col-lg-2 col-md-3 col-sm-4 col-6 covers-col p-1">
     <a href="<%= work_path(work.id) %>" class="subtle"><div class="container-fluid position-relative p-0">
-      <div class="overlay white opaque hover-reveal work-overlay"></div>
+      <div class="overlay white opaque hover-reveal work-overlay" data-title="<%= work.title %>" data-caption="<%= work.caption %>" data-url="<%= image_url(work.image.url) %>"></div>
       <div class="square-img-wrapper" style="background-image: url(<%= image_url(work.image.url) %>)">
       </div>
     </div></a>
@@ -34,10 +34,10 @@
           <i class="fa fa-angle-left"></i>
       </div>
       <div class="col-md-8 col-9 position-relative p-0">
-        <%= image_tag @works[1].image.url, class: 'img-fluid' %>
+        <%= image_tag @works[1].image.url, class: 'img-fluid', id: 'work-image' %>
         <div class="overlay opaque hover-reveal work-overlay" id="work-info">
-          <h5><%= @works[1].title%></h5>
-          <p class="smallish"><%= @works[1].caption %></p>
+          <h5 id="work-title"><%= @works[1].title%></h5>
+          <p class="smallish" id="work-description"><%= @works[1].caption %></p>
         </div>
       </div>
       <div class="col-1 work-nav p-0">
