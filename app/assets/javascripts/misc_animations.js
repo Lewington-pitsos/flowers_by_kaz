@@ -19,10 +19,13 @@ function fadeInIfVisible(elements) {
 }
 
 function showWork($element) {
+  // grabs the data-attributes from the passed in element and sets the values of the currently shown image to those values
+  // also records which element is currently being pointed at
   var data = $element.data();
   $('#work-image').attr('src', data.url);
   $('#work-title').text(data.title);
   $('#work-description').text(data.caption);
+  $('#work-holder').data('element', data.number)
 }
 
 // for some FUCKED reason you have to reload all javascripts on the 'turbolinks.load' function or else they only work after a page refresh
@@ -60,6 +63,29 @@ $(window).on('turbolinks:load', function() {
     setTimeout(function() {
       $('.work-show').css('display', 'none');
     }, 502)
+  })
+
+  $('.work-nav.prev').on('click', function() {
+    // finds the count id of the currently displayed work
+    // subtracts one from this id, and displays the corresponding work
+    // if no work corresponds to the new id, selects the highest-count-id work
+    var selector = '#work-' + ($('#work-holder').data('element') - 1);
+    if (!$(selector).length) {
+      selector = '#work-' + ($('.work-overlay').length - 1);
+    }
+    showWork($(selector))
+  })
+
+  $('.work-nav.next').on('click', function() {
+    // finds the count id of the currently displayed work
+    // adds one to this id, and displays the corresponding work
+    // if no work corresponds to the new id, selects the lowest-count-id work
+    var selector = '#work-' + ($('#work-holder').data('element') + 1);
+    if (!$(selector).length) {
+      selector = '#work-1'
+    }
+    console.log(selector);
+    showWork($(selector))
   })
 
 

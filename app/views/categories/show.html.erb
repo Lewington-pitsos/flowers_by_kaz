@@ -1,14 +1,17 @@
 <div class="row covers">
+  <% count = 1 %>
+
   <% @works.each do |work| %>
 
   <div class="col-lg-2 col-md-3 col-sm-4 col-6 covers-col p-1">
     <a href="<%= work_path(work.id) %>" class="subtle"><div class="container-fluid position-relative p-0">
-      <div class="overlay white opaque hover-reveal work-overlay" data-title="<%= work.title %>" data-caption="<%= work.caption %>" data-url="<%= image_url(work.image.url) %>"></div>
+      <div class="overlay white opaque hover-reveal work-overlay" data-title="<%= work.title %>" data-caption="<%= work.caption %>" data-url="<%= image_url(work.image.url) %>" data-number="<%= count %>" id="work-<%= count %>"></div>
       <div class="square-img-wrapper" style="background-image: url(<%= image_url(work.image.url) %>)">
       </div>
     </div></a>
   </div>
 
+    <% count += 1 %>
   <% end %>
 
 </div>
@@ -30,7 +33,7 @@
   </div>
   <div class="container-fluid d-flex align-items-center p-0" id="work-holder">
     <div class="row justify-content-center align-items-stretch">
-      <div class="col-1 work-nav p-0">
+      <div class="col-1 work-nav prev p-0">
           <i class="fa fa-angle-left"></i>
       </div>
       <div class="col-md-8 col-9 position-relative p-0">
@@ -40,7 +43,7 @@
           <p class="smallish" id="work-description"><%= @works[1].caption %></p>
         </div>
       </div>
-      <div class="col-1 work-nav p-0">
+      <div class="col-1 work-nav next p-0">
           <i class="fa fa-angle-right"></i>
       </div>
     </div>
