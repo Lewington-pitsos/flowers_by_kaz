@@ -44,7 +44,7 @@ $(window).on('turbolinks:load', function() {
     // paralax is positioned absoloutely so normally it scrolls along with background
     // instead we shift it down slightly as the screen scrolls so it looks like it's scrolling more slowly
     var screenTop = $(window).scrollTop();
-    $('.parallax').css('top', `${screenTop / 3}px`)
+    $('.parallax').css('top', (screenTop / 3) + 'px')
   });
 
 })
