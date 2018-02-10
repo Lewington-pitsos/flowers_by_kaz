@@ -10,6 +10,7 @@
       </div>
     </div></a>
     <% if session[:admin] %>
+      <h4>Position: <%= work.position %></h4>
        <%= button_to 'Delete', "/works/#{work.id}", method: :delete %>
        <%= button_to 'Edit', edit_work_path(work.id), method: :get %>
     <% end %>
