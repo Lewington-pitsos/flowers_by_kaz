@@ -6,13 +6,20 @@
   <br />
 
   <%= f.label 'Category cover image:' %>
-  <%= f.file_field :image %>
+  <%= f.file_field :image, id: "file-upload" %>
   <br />
 
   <%= f.label 'Place (1 = first place, 2 = second, etc...):' %>
   <%= f.number_field :place, value: @category.position %>
   <br />
-  <%= f.submit 'Save Changes' %>
+
+  <div class="position-relative">
+    <%= f.submit 'Save Changes' %>
+    <div class="overlay opaque hover-reveal" id="upload-helper">
+      Wait, No Image Uploaded yet!
+    </div>
+  </div>
+
 <% end %>
 
 <%= link_to 'Cancel', categories_path %>

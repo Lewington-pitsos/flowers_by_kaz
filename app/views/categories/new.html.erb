@@ -6,14 +6,20 @@
   <br />
 
   <%= f.label 'Category cover image:' %>
-  <%= f.file_field :image %>
+  <%= f.file_field :image, id: "file-upload" %>
   <br />
 
   <%= f.label 'Place:' %>
   <%= f.number_field :place, value: 1 %>
   <br /><br />
 
-  <%= f.submit 'Create' %>
+  <div class="container">
+    <%= f.submit 'Create' %>
+    <div class="overlay opaque hover-reveal" id="upload-helper">
+      Wait, No Image Uploaded yet!
+    </div>
+  </div>
+
 <% end %>
 
 <a href="javascript:history.back()"> Cancel</a>
