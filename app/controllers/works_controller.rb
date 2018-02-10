@@ -28,7 +28,12 @@ class WorksController < ApplicationController
 
   def destroy
     id = @work.category.id
+
+    # the deleted work's position is recorded, the work is destroyed, and THEN all highert works form the same cetegory are shuffled down as far as they can be shuffled down
+    deleted_position = @work.position
     @work.destroy
+    work_shuffle_delete(deleted_position, id)
+
     redirect_to category_path(id)
   end
 

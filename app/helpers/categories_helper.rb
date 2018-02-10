@@ -1,6 +1,6 @@
 module CategoriesHelper
   def save_cat_place(cat, place)
-    # recursive function
+    # recurisve function, pushes the current place down untill it is as low as possible wirhout conflicting, OR, if there is a conflict, pushes it up
 
     prev_slot = Category.where(position: place - 1)
     if prev_slot.empty? && place > 1
@@ -16,5 +16,15 @@ module CategoriesHelper
       end
       cat.update_attribute(:position, place)
     end
+  end
+
+  def cat_shuffle_delete(position)
+    # grabs an array of all cats with a higher position than the passed in positione (orderd in ascending position order)
+    # re-saves the position of each category IN ORDER
+    Category.where("position > ?", position)
+      .order(position: :asc)
+      .each do |cat|
+        save_cat_place(cat, cat.position)
+      end
   end
 end

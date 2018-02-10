@@ -44,15 +44,11 @@ class CategoriesController < ApplicationController
       work.destroy
     end
 
+    # the deleted categorie's position is recorded, the category is destroyed, and THEN all higher categories are shuffled down as far as they can be shuffled down
     deleted_position = @category.position
-
     @category.destroy
+    cat_shuffle_delete(deleted_position)
 
-    Category.where("position > ?",deleted_position)
-      .order(position: :asc)
-      .each do |cat|
-        save_cat_place(cat, cat.position)
-      end
     flash[:success] = 'category deleted'
     redirect_to categories_path
   end
