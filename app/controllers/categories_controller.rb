@@ -43,7 +43,7 @@ class CategoriesController < ApplicationController
     @category.works.each do |work|
       work.destroy
     end
-    
+  
     @category.destroy
     flash[:success] = 'category deleted'
     redirect_to categories_path
