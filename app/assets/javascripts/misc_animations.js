@@ -39,4 +39,12 @@ $(window).on('turbolinks:load', function() {
       fadeInIfVisible(hiddenServiceElements);
     });
   }
+
+  // fade out all flashes after 10 seconds
+  setTimeout(function() {
+    $('.flash').fadeTo(500, 0);
+    setTimeout(function() {
+      $('.flash').addClass('hidden');
+    }, 501)
+  }, 10000)
 })
