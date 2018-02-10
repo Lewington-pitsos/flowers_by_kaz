@@ -43,8 +43,16 @@ class CategoriesController < ApplicationController
     @category.works.each do |work|
       work.destroy
     end
-  
+
+    deleted_position = @category.position
+
     @category.destroy
+
+    Category.where("position > ?",deleted_position)
+      .order(position: :asc)
+      .each do |cat|
+        save_cat_place(cat, cat.position)
+      end
     flash[:success] = 'category deleted'
     redirect_to categories_path
   end
