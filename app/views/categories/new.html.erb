@@ -13,13 +13,12 @@
   <%= f.number_field :place, value: 1 %>
   <br /><br />
 
-  <div class="container">
+  <div class="position-relative">
     <%= f.submit 'Create' %>
-    <div class="overlay opaque hover-reveal" id="upload-helper">
-      Wait, No Image Uploaded yet!
+    <div class="overlay white opaque hover-reveal hidden" id="upload-helper">
+      Wait, file still uploading...
     </div>
   </div>
-
 <% end %>
 
 <a href="javascript:history.back()"> Cancel</a>

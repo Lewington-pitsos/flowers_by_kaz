@@ -53,5 +53,5 @@ $(window).on('turbolinks:load', function() {
   // fade out all flashes after 10 seconds
   setTimeout(function() {
     fadeAndHide('.flash');
-  }, 500)
+  }, 10000)
 })
