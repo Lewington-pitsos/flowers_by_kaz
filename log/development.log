@@ -20282,3 +20282,108 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.4ms)
 
 
+Started DELETE "/admins/kaz123" for 127.0.0.1 at 2018-02-10 13:24:48 +1100
+Processing by AdminsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Kw7VO1+yP1vdYHBZTSm5rMY9VaYNB5+vZoR0IfU8VbNIWVpwI4NU6U41tFyxo8Vn/DTlJAuoo/7FAGL1pN1YzA==", "id"=>"kaz123"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[36mCACHE Admin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "admins" SET "encrypted_token" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["encrypted_token", "96b6e76ac60d523b70f6c3cf555b824f3b350ed9"], ["updated_at", "2018-02-10 02:24:48.410383"], ["id", 7]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 24ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-10 13:24:48 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (11.7ms)
+  Rendered shared/_head.html.erb (127.1ms)
+  Rendered shared/_logo.html.erb (1.3ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 155ms (Views: 150.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-02-10 13:25:37 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-10 13:25:37 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+  Rendered shared/_head.html.erb (115.4ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (1.1ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 129.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/new" for 127.0.0.1 at 2018-02-10 13:25:41 +1100
+Processing by AdminsController#new as HTML
+  Rendering admins/new.html.erb within layouts/application
+  Rendered admins/new.html.erb within layouts/application (14.7ms)
+  Rendered shared/_head.html.erb (70.7ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 110ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins" for 127.0.0.1 at 2018-02-10 13:25:43 +1100
+Processing by AdminsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XNoTZveDkKaFvKSEXVyONmkWSOqbHytMxK2FPEK7O/Y/jZwti7L7FBbpYIGh1vL9Ux/4aJ2wFx1nKZPoE1o2iQ==", "admin"=>{"username"=>"kaz123", "password"=>"[FILTERED]", "stay_signed_in"=>"1"}, "commit"=>"Sign in"}
+  [1m[36mAdmin Load (1.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[36mCACHE Admin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "admins" SET "encrypted_token" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["encrypted_token", "d009ceb3d6596d01a97001114db6c5587c7c517e"], ["updated_at", "2018-02-10 02:25:43.055874"], ["id", 7]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 36ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-10 13:25:43 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (9.5ms)
+  Rendered shared/_head.html.erb (65.4ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 88ms (Views: 83.5ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/admins/kaz123" for 127.0.0.1 at 2018-02-10 13:26:54 +1100
+Processing by AdminsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C+X4K6x0j0HLRiGP1GkMqw7Q9YCOi7cImVH0wC2d/gdosndg0EXk81gT5Yoo43BgNNlFAogki1k61eIUfHzzeA==", "id"=>"kaz123"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[36mCACHE Admin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "admins" SET "encrypted_token" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["encrypted_token", "d15195f9a17eda6c5fce20e7f8194b9fd34dea63"], ["updated_at", "2018-02-10 02:26:54.430545"], ["id", 7]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 29ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-10 13:26:54 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (6.2ms)
+  Rendered shared/_head.html.erb (116.0ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 130.4ms | ActiveRecord: 0.4ms)
+
+
