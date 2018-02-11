@@ -1,30 +1,5 @@
 <h1>Upload Artwork</h1>
 
-<%= form_for [@category, @work] do |f| %>
-  <%= f.label 'Work Name:' %>
-  <%= f.text_field :title %>
-  <br />
-
-  <%= f.label 'Image:' %>
-  <%= f.file_field :image, id: 'file-upload' %>
-  <br />
-
-  <%= f.label 'Caption:' %>
-  <%= f.text_area :caption %>
-  <br /><br />
-
-  <%= f.label 'Place:' %>
-  <%= f.number_field :place, value: 1 %>
-  <br /><br />
-
-  <div class="position-relative">
-    <%= f.submit 'Upload' %>
-    <div class="overlay white opaque hover-reveal hidden" id="upload-helper">
-      Wait, file still uploading...
-    </div>
-  </div>
-
-
-<% end %>
+<%= render '/works/works_form' %>
 
 <%= link_to "Back to #{@category.title}", category_path(@category.id) %>

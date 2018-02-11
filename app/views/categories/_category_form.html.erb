@@ -8,7 +8,7 @@
   <br />
 
   <%= f.label 'Place (1 = first place, 2 = second, etc...):' %>
-  <%= f.number_field :place, value: @category.position || @default_position %>
+  <%= f.number_field :place, value: @category.position || 1 %>
   <br />
   <%= f.submit 'Save Changes' %>
 <% end %>

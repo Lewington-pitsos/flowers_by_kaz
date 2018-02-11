@@ -22080,3 +22080,463 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:28:52 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.6ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (55.3ms)
+  Rendered shared/_head.html.erb (47.3ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 129ms (Views: 108.7ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/works/53/edit" for 127.0.0.1 at 2018-02-11 19:28:54 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"53"}
+  [1m[36mWork Load (1.5ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (21.3ms)
+  Rendered works/edit.html.erb within layouts/application (27.3ms)
+  Rendered shared/_head.html.erb (65.6ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 130ms (Views: 114.8ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/works/53" for 127.0.0.1 at 2018-02-11 19:29:01 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4YRGxnfwXJRuNrT1CXYdODQxOKmJN80TzX3jQP0JlQILWpaGqIjO2kdqUW5gV4NCCGdZsKa3R4uCIUr6l67zag==", "work"=>{"title"=>"dggg", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9888d6dcd8 @tempfile=#<Tempfile:/tmp/RackMultipart20180211-21629-13qgkrf.jpg>, @original_filename="ring.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"work[image]\"; filename=\"ring.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"fdgdfgsfgsdasfdsadasasd", "place"=>"3"}, "commit"=>"Save changes", "id"=>"53"}
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "title" = $1, "image" = $2, "caption" = $3, "updated_at" = $4 WHERE "works"."id" = $5[0m  [["title", "dggg"], ["image", "ring.jpg"], ["caption", "fdgdfgsfgsdasfdsadasasd"], ["updated_at", "2018-02-11 08:29:01.821430"], ["id", 53]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:29:01.836593"], ["id", 53]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 47ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:29:01 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (7.8ms)
+  Rendered shared/_head.html.erb (55.7ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (1.0ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 71.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/works/56/edit" for 127.0.0.1 at 2018-02-11 19:29:11 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mWork Load (1.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (14.3ms)
+  Rendered works/edit.html.erb within layouts/application (20.6ms)
+  Rendered shared/_head.html.erb (76.7ms)
+  Rendered shared/_logo.html.erb (1.4ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 116.9ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/works/56" for 127.0.0.1 at 2018-02-11 19:29:19 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PGXrHkQx+bZ7A0i0xJc7HfGWWl6jIyVIJuc3A5E/99zWuztem0lr+FJfrS+ttqVnzcA7R4yjr9Bpu565+5iRtA==", "work"=>{"title"=>"fff", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9896395e78 @tempfile=#<Tempfile:/tmp/RackMultipart20180211-21629-25q7nr.jpg>, @original_filename="Markdowns-56a7f71d5f9b58b7d0efaf75.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"work[image]\"; filename=\"Markdowns-56a7f71d5f9b58b7d0efaf75.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"dfdf", "place"=>"8"}, "commit"=>"Save changes", "id"=>"56"}
+  [1m[36mWork Load (1.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "works" SET "title" = $1, "image" = $2, "caption" = $3, "updated_at" = $4 WHERE "works"."id" = $5[0m  [["title", "fff"], ["image", "Markdowns-56a7f71d5f9b58b7d0efaf75.jpg"], ["caption", "dfdf"], ["updated_at", "2018-02-11 08:29:19.700420"], ["id", 56]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 7], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 6], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 5], ["updated_at", "2018-02-11 08:29:19.733022"], ["id", 56]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 67ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:29:19 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (7.2ms)
+  Rendered shared/_head.html.erb (43.4ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/works/58/edit" for 127.0.0.1 at 2018-02-11 19:29:27 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mWork Load (1.1ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (15.7ms)
+  Rendered works/edit.html.erb within layouts/application (22.4ms)
+  Rendered shared/_head.html.erb (67.0ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 119ms (Views: 107.8ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/works/58" for 127.0.0.1 at 2018-02-11 19:29:33 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S6Dozy0PR2JZjMsPW6X7YDnPms2nB3zGsITA8PbFjFWhfjiP8nfVLHDQLpQyhGUaBZn71IiH9l7/2GlKnGLqPQ==", "work"=>{"title"=>"rerwr", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f988b029b00 @tempfile=#<Tempfile:/tmp/RackMultipart20180211-21629-177j9rx.jpg>, @original_filename="mediocre.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"work[image]\"; filename=\"mediocre.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"fdsffsdsfdfd", "place"=>"1"}, "commit"=>"Save changes", "id"=>"58"}
+  [1m[36mWork Load (1.7ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "works" SET "title" = $1, "image" = $2, "caption" = $3, "updated_at" = $4 WHERE "works"."id" = $5[0m  [["title", "rerwr"], ["image", "mediocre.jpg"], ["caption", "fdsffsdsfdfd"], ["updated_at", "2018-02-11 08:29:33.406195"], ["id", 58]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:29:33.430605"], ["id", 53]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:29:33.435281"], ["id", 58]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 61ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:29:33 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (6.3ms)
+  Rendered shared/_head.html.erb (49.5ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 63.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/17/works/new" for 127.0.0.1 at 2018-02-11 19:31:14 +1100
+Processing by WorksController#new as HTML
+  Parameters: {"category_id"=>"17"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (171.0ms)
+  Rendered works/new.html.erb within layouts/application (174.5ms)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `works_path' for #<#<Class:0x00007f98895c54d0>:0x00007f988a5677a8>
+Did you mean?  work_path):
+    1: <%= form_for @work do |f| %>
+    2:   <%= f.label 'Work Name:' %>
+    3:   <%= f.text_field :title %>
+    4:   <br />
+  
+app/views/works/_works_form.html.erb:1:in `_app_views_works__works_form_html_erb___875749301448507199_70146565643300'
+app/views/works/new.html.erb:3:in `_app_views_works_new_html_erb__2738505251469963884_70146566340880'
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:33:50 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (4.7ms)
+  Rendered shared/_head.html.erb (40.8ms)
+  Rendered shared/_logo.html.erb (1.1ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/17/works/new" for 127.0.0.1 at 2018-02-11 19:33:53 +1100
+Processing by WorksController#new as HTML
+  Parameters: {"category_id"=>"17"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (5.4ms)
+  Rendered works/new.html.erb within layouts/application (7.6ms)
+  Rendered shared/_head.html.erb (40.7ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories/17/works" for 127.0.0.1 at 2018-02-11 19:33:57 +1100
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xuvKtl4t+D4AnGwH/zFcxfQph9T5ohwu8/GzJ+qnxysvH/haua/SzZW8GGpCW1yX1tRwsVZHyC7SId8EQSZtig==", "work"=>{"title"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9888c3b130 @tempfile=#<Tempfile:/tmp/RackMultipart20180211-21629-3ras59.jpg>, @original_filename="gallery_147289_12845_24173.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"work[image]\"; filename=\"gallery_147289_12845_24173.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"", "place"=>"1"}, "commit"=>"Save changes", "category_id"=>"17"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "image", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", ""], ["caption", ""], ["image", "gallery_147289_12845_24173.jpg"], ["category_id", 17], ["created_at", "2018-02-11 08:33:57.589460"], ["updated_at", "2018-02-11 08:33:57.589460"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:33:57.610266"], ["id", 59]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 53ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:33:57 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.9ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (6.4ms)
+  Rendered shared/_head.html.erb (49.1ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (1.1ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/works/58/edit" for 127.0.0.1 at 2018-02-11 19:34:00 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (13.6ms)
+  Rendered works/edit.html.erb within layouts/application (18.8ms)
+  Rendered shared/_head.html.erb (101.1ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 145ms (Views: 135.3ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/works/58" for 127.0.0.1 at 2018-02-11 19:34:04 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f3EYC9PzKp+WN22Xj74APWTjaXRnu2ZF+lDsk1jVU56Vr8hLDIu40b9riAzmn55HWLUIbUg77N21DEUpMnI19g==", "work"=>{"title"=>"rerwr", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9888d2dd90 @tempfile=#<Tempfile:/tmp/RackMultipart20180211-21629-1lcld6n.jpg>, @original_filename="gallery_147289_12845_24173.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"work[image]\"; filename=\"gallery_147289_12845_24173.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"fdsffsdsfdfd", "place"=>"2"}, "commit"=>"Save changes", "id"=>"58"}
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "works" SET "image" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["image", "gallery_147289_12845_24173.jpg"], ["updated_at", "2018-02-11 08:34:04.172768"], ["id", 58]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:34:04.212606"], ["id", 53]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:34:04.218081"], ["id", 58]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 79ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:34:04 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (8.8ms)
+  Rendered shared/_head.html.erb (51.2ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 68.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/works/59" for 127.0.0.1 at 2018-02-11 19:34:07 +1100
+Processing by WorksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qRbqyxEup8JvcybJQ2oABiWPz6cvfD59MOhXFvtlb/xDyDqLzlY1jEYvw1IqS558GdmuvgD8tOV/tP6skcIJlA==", "id"=>"59"}
+  [1m[36mWork Load (1.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  [1m[36mCategory Load (3.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "works" WHERE "works"."id" = $1[0m  [["id", 59]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mWork Load (1.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 AND (position > 1) ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  [1m[36mWork Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:34:07.999070"], ["id", 58]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:34:08.028040"], ["id", 53]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:34:08.041139"], ["id", 56]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 121ms (ActiveRecord: 30.8ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:34:08 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (4.7ms)
+  Rendered shared/_head.html.erb (52.6ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.9ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_flashes.html.erb (3.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 67.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/works/56" for 127.0.0.1 at 2018-02-11 19:34:12 +1100
+Processing by WorksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+Zhh45EwyJD7UJzwCI/08G0vZgJuZ2tXm/Rm3Ck04nYTRrGjTkha3tIMeWthrmqKUXkHG0Hn4c/UqM9mQ5OEHg==", "id"=>"56"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "works" WHERE "works"."id" = $1[0m  [["id", 56]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 AND (position > 3) ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 16ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:34:12 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (5.5ms)
+  Rendered shared/_head.html.erb (47.5ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-02-11 19:34:15 +1100
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_category_form.html.erb (11.0ms)
+  Rendered categories/new.html.erb within layouts/application (15.9ms)
+  Rendered shared/_head.html.erb (90.4ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 129ms (Views: 124.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-02-11 19:34:21 +1100
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Rg5sso5ECj7SmKWxfuagTjAd8t8B0UdKsQQZA5E3zEXxunyFUGCZtIWhw2s2gT7BJYW0lOHz4VlmLneZOO5WQ==", "category"=>{"title"=>"tdggfd", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9888f98aa8 @tempfile=#<Tempfile:/tmp/RackMultipart20180211-21629-13s6jcv.jpg>, @original_filename="GettyImages-73092062web-5730fb245f9b58c34cc7fca3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"category[image]\"; filename=\"GettyImages-73092062web-5730fb245f9b58c34cc7fca3.jpg\"\r\nContent-Type: image/jpeg\r\n">, "place"=>"1"}, "commit"=>"Save Changes"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("title", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "tdggfd"], ["image", "GettyImages-73092062web-5730fb245f9b58c34cc7fca3.jpg"], ["created_at", "2018-02-11 08:34:21.801829"], ["updated_at", "2018-02-11 08:34:21.801829"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 0], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Category Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 1], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Category Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 2], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Category Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 3], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "categories" SET "position" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:34:21.822322"], ["id", 17]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "categories" SET "position" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:34:21.827413"], ["id", 48]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "categories" SET "position" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:34:21.833707"], ["id", 49]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "categories" SET "position" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:34:21.844152"], ["id", 51]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 60ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:34:21 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (8.5ms)
+  Rendered shared/_head.html.erb (52.3ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (21.1ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.7ms)
+
+
