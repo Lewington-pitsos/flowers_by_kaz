@@ -1,12 +1,4 @@
 class BasicMailer < ApplicationMailer
-<<<<<<< HEAD
-  default from: 'lewington@student.unimelb.edu.au'
-  # default is a hash with a bunch of values representing the default configureation for an email send (address, sender, subejct, etc)
-
-  def welcome_email
-    @url  = 'http://localhost:3000/home'
-    mail(to: 'lewington@student.unimelb.edu.au', subject: 'Welcome to My Awesome Site').deliver
-=======
   default from: 'altitudechess@gmail.com'
   # default is a hash with a bunch of values representing the default configureation for an email send (address, sender, subejct, etc)
 
@@ -20,7 +12,6 @@ class BasicMailer < ApplicationMailer
     @email = info[:email]
     @content = info[:content]
     mail(to: 'lewington@student.unimelb.edu.au', subject: "Message from #{@name} via flowersbykaz.com")
->>>>>>> mailer
   end
 
 
