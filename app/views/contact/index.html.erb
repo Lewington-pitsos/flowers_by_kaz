@@ -5,7 +5,8 @@
       <p class="text-justify delicate">Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qu</p>
     </div>
     <div class="form-container">
-      <form action="/send" method="post">
+      <form action="/send_mail" method="post">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
         <div class="form-group">
           <label for="email">Email (Required)</label>
           <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">

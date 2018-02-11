@@ -1,9 +1,9 @@
 class ContactController < ApplicationController
 
-  def send(params='lol')
-    BasicMailer.welcome_email.deliver
+  def send_mail(params='lol')
+    BasicMailer.welcome_email.deliver_later
     flash.now[:error] = 'Thank you for your enquiry. We should get back to you shortly.'
-    render 'index'
+    redirect_to home_path
   end
 
   def index
