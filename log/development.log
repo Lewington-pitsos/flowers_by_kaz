@@ -22540,3 +22540,1015 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/categories/49/edit" for 127.0.0.1 at 2018-02-11 19:36:22 +1100
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_category_form.html.erb (2.6ms)
+  Rendered categories/edit.html.erb within layouts/application (4.5ms)
+  Rendered shared/_head.html.erb (45.9ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/categories/49" for 127.0.0.1 at 2018-02-11 19:36:25 +1100
+Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bk9orUzX3tXDie4c+Un9G/7nYBtf+Y/RTHIP9fm06jfskbjtk69Mm+rVC4eQaGNhwrEBAnB5BUkDLqZPkxOMXw==", "category"=>{"title"=>"rwerererwe", "place"=>"29"}, "commit"=>"Save Changes", "id"=>"49"}
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 28], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 27], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 26], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 25], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 24], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 23], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 22], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 21], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 20], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 19], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 18], ["LIMIT", 1]]
+  [1m[36mCategory Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 17], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 16], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 15], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 14], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 13], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 12], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 11], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 10], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 9], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 8], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 7], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 6], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 5], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Category Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "categories" SET "position" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["position", 5], ["updated_at", "2018-02-11 08:36:25.715084"], ["id", 49]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 82ms (ActiveRecord: 23.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:36:25 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (8.9ms)
+  Rendered shared/_head.html.erb (56.6ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.9ms)
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 75.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:40:07 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (14.4ms)
+  Rendered shared/_head.html.erb (45.0ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 62.9ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/categories/48" for 127.0.0.1 at 2018-02-11 19:40:10 +1100
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FwL/BxVmB2nNjseErcnAt9U6sgFyMAS2hPefCb9Gugagtu8wy0KU45q3oV7lrl44wKL0SpISoqVT3fGTFp8gA==", "id"=>"48"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1[0m  [["category_id", 48]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 48]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE (position > 3) ORDER BY "categories"."position" ASC[0m
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 3], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 2], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Category Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "categories" SET "position" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:40:10.057246"], ["id", 17]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 4], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 3], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Category Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "categories" SET "position" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:40:10.067071"], ["id", 49]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 38ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:40:10 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (4.8ms)
+  Rendered shared/_head.html.erb (45.8ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/17/edit" for 127.0.0.1 at 2018-02-11 19:40:12 +1100
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_category_form.html.erb (13.1ms)
+  Rendered categories/edit.html.erb within layouts/application (19.6ms)
+  Rendered shared/_head.html.erb (71.9ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 119ms (Views: 108.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/categories/17" for 127.0.0.1 at 2018-02-11 19:40:15 +1100
+Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdg9znaAqj+H7ZEeeJLLg9Anx6mKsVfmWX+ueLq2HXgrBu2Oqfg4ca6xdIURs1X57HGmsKUx3X4WIwfC0BF7EA==", "category"=>{"title"=>"somethinffffdsfg", "place"=>"26"}, "commit"=>"Save Changes", "id"=>"17"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 25], ["LIMIT", 1]]
+  [1m[36mCategory Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 24], ["LIMIT", 1]]
+  [1m[36mCategory Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 23], ["LIMIT", 1]]
+  [1m[36mCategory Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 22], ["LIMIT", 1]]
+  [1m[36mCategory Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 21], ["LIMIT", 1]]
+  [1m[36mCategory Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 20], ["LIMIT", 1]]
+  [1m[36mCategory Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 19], ["LIMIT", 1]]
+  [1m[36mCategory Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 18], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 17], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 16], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 15], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 14], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 13], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 12], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 11], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 10], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 9], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 8], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 7], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 6], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 5], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 4], ["LIMIT", 1]]
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Category Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."position" = $1 LIMIT $2[0m  [["position", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "categories" SET "position" = $1, "updated_at" = $2 WHERE "categories"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:40:15.898099"], ["id", 17]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 92ms (ActiveRecord: 23.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:40:15 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (5.5ms)
+  Rendered shared/_head.html.erb (50.9ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.9ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 63.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:40:22 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (50.9ms)
+  Rendered shared/_head.html.erb (49.0ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 106.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/categories/17/works/new" for 127.0.0.1 at 2018-02-11 19:40:25 +1100
+Processing by WorksController#new as HTML
+  Parameters: {"category_id"=>"17"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (16.6ms)
+  Rendered works/new.html.erb within layouts/application (23.0ms)
+  Rendered shared/_head.html.erb (68.1ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 116.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/categories/17/works" for 127.0.0.1 at 2018-02-11 19:40:27 +1100
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SOyLxUH7eAKDZBc8DIEX2lgjnpKB1v8KIdK6S10lSdmhGLkppnlS8RZEY1Gx6xeIet5p9y4zKwoAAtZo9qTjeA==", "work"=>{"title"=>"asd", "caption"=>"d", "place"=>"1"}, "commit"=>"Save changes", "category_id"=>"17"}
+  [1m[36mCategory Load (2.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asd"], ["caption", "d"], ["category_id", 17], ["created_at", "2018-02-11 08:40:27.819672"], ["updated_at", "2018-02-11 08:40:27.819672"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:40:27.852480"], ["id", 53]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:40:27.856334"], ["id", 58]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:40:27.860911"], ["id", 60]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 74ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:40:27 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (5.3ms)
+  Rendered shared/_head.html.erb (49.4ms)
+  Rendered shared/_logo.html.erb (1.5ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/works/58/edit" for 127.0.0.1 at 2018-02-11 19:40:29 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mWork Load (1.5ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (6.8ms)
+  Rendered works/edit.html.erb within layouts/application (9.6ms)
+  Rendered shared/_head.html.erb (55.6ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 91ms (Views: 78.1ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/works/58" for 127.0.0.1 at 2018-02-11 19:40:33 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0VIGy+07lLtexokSN1xtinjqLunzt9Sz1S1jHFWp4Xc7jNaLMkMG9XeabIleffPwRLxP8Nw3XiuaccqmPw6HHw==", "work"=>{"title"=>"rerwr", "caption"=>"fdsffsdsfdfd", "place"=>"26"}, "commit"=>"Save changes", "id"=>"58"}
+  [1m[36mWork Load (1.1ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 25], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 24], ["LIMIT", 1]]
+  [1m[36mWork Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 23], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 22], ["LIMIT", 1]]
+  [1m[36mWork Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 21], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 20], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 19], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 18], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 17], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 16], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 15], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 14], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 13], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 12], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 11], ["LIMIT", 1]]
+  [1m[36mWork Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 10], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 9], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 8], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 7], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 6], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:40:33.324212"], ["id", 58]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 24.9ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/works_controller.rb:47:in `update'
+Started PATCH "/works/58" for 127.0.0.1 at 2018-02-11 19:40:50 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0VIGy+07lLtexokSN1xtinjqLunzt9Sz1S1jHFWp4Xc7jNaLMkMG9XeabIleffPwRLxP8Nw3XiuaccqmPw6HHw==", "work"=>{"title"=>"rerwr", "caption"=>"fdsffsdsfdfd", "place"=>"26"}, "commit"=>"Save changes", "id"=>"58"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 25], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 24], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 23], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 22], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 21], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 20], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 19], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 18], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 17], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 16], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 15], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 14], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 13], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 12], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 11], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 10], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 9], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 8], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 7], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 6], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 5], ["updated_at", "2018-02-11 08:40:50.662597"], ["id", 58]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 AND (position > 0) ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:40:50.673159"], ["id", 60]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:40:50.680804"], ["id", 53]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 6], ["updated_at", "2018-02-11 08:40:50.689790"], ["id", 58]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 83ms (ActiveRecord: 21.3ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:40:50 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (6.0ms)
+  Rendered shared/_head.html.erb (49.2ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 62.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:41:40 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (13.0ms)
+  Rendered shared/_head.html.erb (43.3ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 84ms (Views: 61.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/works/53/edit" for 127.0.0.1 at 2018-02-11 19:41:42 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"53"}
+  [1m[36mWork Load (0.9ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (12.5ms)
+  Rendered works/edit.html.erb within layouts/application (17.9ms)
+  Rendered shared/_head.html.erb (55.3ms)
+  Rendered shared/_logo.html.erb (1.1ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 102ms (Views: 90.2ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/works/53" for 127.0.0.1 at 2018-02-11 19:41:44 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p/seFHwgU7ve3HxiBRTjTlXwkfVpIaJtB1zvr5uamYJNJc5Uo1jB9feAmflsNX00aabw7EahKPVIAEYV8T3/6g==", "work"=>{"title"=>"dggg", "caption"=>"fdgdfgsfgsdasfdsadasasd", "place"=>"46"}, "commit"=>"Save changes", "id"=>"53"}
+  [1m[36mWork Load (2.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 45], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 44], ["LIMIT", 1]]
+  [1m[36mWork Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 43], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 42], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 41], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 40], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 39], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 38], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 37], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 36], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 35], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 34], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 33], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 32], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 31], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 30], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 29], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 28], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 27], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 26], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 25], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 24], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 23], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 22], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 21], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 20], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 19], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 18], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 17], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 16], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 15], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 14], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 13], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 12], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 11], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 10], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 9], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 8], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 7], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 7], ["updated_at", "2018-02-11 08:41:44.886573"], ["id", 53]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 25.0ms)
+
+
+  
+NoMethodError (undefined method `catego' for #<Work:0x00007f9890a2d5e8>
+Did you mean?  category):
+  
+app/controllers/works_controller.rb:47:in `update'
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:41:49 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:41:50 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:42:17 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:42:18 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:42:32 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:42:32 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:42:56 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:42:57 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:42:57 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:43:03 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:43:05 +1100
+Started PUT "/__web_console/repl_sessions/2b91493504a0e6b304617ad66de44107" for 127.0.0.1 at 2018-02-11 19:43:06 +1100
+Started PATCH "/works/53" for 127.0.0.1 at 2018-02-11 19:43:22 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p/seFHwgU7ve3HxiBRTjTlXwkfVpIaJtB1zvr5uamYJNJc5Uo1jB9feAmflsNX00aabw7EahKPVIAEYV8T3/6g==", "work"=>{"title"=>"dggg", "caption"=>"fdgdfgsfgsdasfdsadasasd", "place"=>"46"}, "commit"=>"Save changes", "id"=>"53"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 45], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 44], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 43], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 42], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 41], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 40], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 39], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 38], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 37], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 36], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 35], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 34], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 33], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 32], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 31], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 30], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 29], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 28], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 27], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 26], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 25], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 24], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 23], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 22], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 21], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 20], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 19], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 18], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 17], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 16], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 15], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 14], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 13], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 12], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 11], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 10], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 9], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 8], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 8], ["updated_at", "2018-02-11 08:43:22.494498"], ["id", 53]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 AND (position > 7) ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 7], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 7], ["updated_at", "2018-02-11 08:43:22.505776"], ["id", 53]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 90ms (ActiveRecord: 20.9ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:43:22 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (5.0ms)
+  Rendered shared/_head.html.erb (52.8ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/works/60" for 127.0.0.1 at 2018-02-11 19:43:24 +1100
+Processing by WorksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Eqw0Jqk+FttUyCq2ZPKyVdUgoF4CBr1PUajai+vNZnH4cuRmdkaElX2Uzy0N0ywv6XbBRy2GN9ce9HMxgWoAGQ==", "id"=>"60"}
+  [1m[36mWork Load (0.9ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "works" WHERE "works"."id" = $1[0m  [["id", 60]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mWork Load (1.8ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 AND (position > 2) ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  [1m[36mWork Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:43:24.639626"], ["id", 58]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 6], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:43:24.658984"], ["id", 53]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 96ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:43:24 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (4.8ms)
+  Rendered shared/_head.html.erb (47.8ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 60.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/17/works/new" for 127.0.0.1 at 2018-02-11 19:43:28 +1100
+Processing by WorksController#new as HTML
+  Parameters: {"category_id"=>"17"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (15.9ms)
+  Rendered works/new.html.erb within layouts/application (21.7ms)
+  Rendered shared/_head.html.erb (101.1ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (1.0ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 153ms (Views: 143.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/categories/17/works" for 127.0.0.1 at 2018-02-11 19:43:32 +1100
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9GSidDpZWm/IB3ZFrxREEw7jH8fzPe8XIgt/nZ12gMEdkJCY3dtwnF0nAigSfkRBLB7oolzYOxcD2xO+NvcqYA==", "work"=>{"title"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9888cdac80 @tempfile=#<Tempfile:/tmp/RackMultipart20180211-21629-9op832.jpg>, @original_filename="GettyImages-73092062web-5730fb245f9b58c34cc7fca3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"work[image]\"; filename=\"GettyImages-73092062web-5730fb245f9b58c34cc7fca3.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"", "place"=>"1"}, "commit"=>"Save changes", "category_id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "image", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", ""], ["caption", ""], ["image", "GettyImages-73092062web-5730fb245f9b58c34cc7fca3.jpg"], ["category_id", 17], ["created_at", "2018-02-11 08:43:32.379557"], ["updated_at", "2018-02-11 08:43:32.379557"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:43:32.391377"], ["id", 53]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:43:32.394472"], ["id", 58]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:43:32.397027"], ["id", 61]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 24ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:43:32 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (4.3ms)
+  Rendered shared/_head.html.erb (39.5ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (1.1ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/17/works/new" for 127.0.0.1 at 2018-02-11 19:43:33 +1100
+Processing by WorksController#new as HTML
+  Parameters: {"category_id"=>"17"}
+  [1m[36mCategory Load (4.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (17.5ms)
+  Rendered works/new.html.erb within layouts/application (24.0ms)
+  Rendered shared/_head.html.erb (78.7ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 148ms (Views: 129.6ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/categories/17/works" for 127.0.0.1 at 2018-02-11 19:43:35 +1100
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AKg3jcJNbTTyW1yhmVwC6TSNLPwS4oTfoA8wKHsFJh3pXAVhJc9Hx2d7KMwkNgK7FnDbmb0HUN+B31wL0ISMvA==", "work"=>{"title"=>"", "caption"=>"", "place"=>"1"}, "commit"=>"Save changes", "category_id"=>"17"}
+  [1m[36mCategory Load (11.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "works" ("title", "caption", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["caption", ""], ["category_id", 17], ["created_at", "2018-02-11 08:43:35.495267"], ["updated_at", "2018-02-11 08:43:35.495267"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Load (0.9ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:43:35.531917"], ["id", 53]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:43:35.537128"], ["id", 58]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:43:35.541976"], ["id", 61]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:43:35.546032"], ["id", 62]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 83ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:43:35 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (5.8ms)
+  Rendered shared/_head.html.erb (48.8ms)
+  Rendered shared/_logo.html.erb (1.4ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/works/62/edit" for 127.0.0.1 at 2018-02-11 19:43:37 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (12.9ms)
+  Rendered works/edit.html.erb within layouts/application (20.4ms)
+  Rendered shared/_head.html.erb (71.3ms)
+  Rendered shared/_logo.html.erb (1.5ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 127ms (Views: 111.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/works/62" for 127.0.0.1 at 2018-02-11 19:43:40 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r/wcGBJy6CMxdOSmSnY9xkqgvJJ6EkzNuMTvwARzq7tFIsxYzQp6bRgoAT0jV6O8dvbdi1WSxlX3mEZ6btTN0w==", "work"=>{"title"=>"", "caption"=>"", "place"=>"11"}, "commit"=>"Save changes", "id"=>"62"}
+  [1m[36mWork Load (5.6ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 10], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 9], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 8], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 7], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 6], ["LIMIT", 1]]
+  [1m[36mWork Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 5], ["updated_at", "2018-02-11 08:43:40.096985"], ["id", 62]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 AND (position > 1) ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:43:40.109841"], ["id", 61]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:43:40.116481"], ["id", 58]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:43:40.138437"], ["id", 53]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:43:40.151465"], ["id", 62]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 109ms (ActiveRecord: 29.0ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:43:40 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (7.6ms)
+  Rendered shared/_head.html.erb (41.8ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/works/61/edit" for 127.0.0.1 at 2018-02-11 19:43:42 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (15.7ms)
+  Rendered works/edit.html.erb within layouts/application (21.5ms)
+  Rendered shared/_head.html.erb (68.6ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 122ms (Views: 108.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/works/61" for 127.0.0.1 at 2018-02-11 19:43:45 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fvfoL1FQmCGKE3ktVUD9xEo5tMfML+QtxHpAchVcqpSUKThvjigKb6NPnLY8YWO+dm/V3uOvbrWLJunIf/vM/A==", "work"=>{"title"=>"", "caption"=>"", "place"=>"4"}, "commit"=>"Save changes", "id"=>"61"}
+  [1m[36mWork Load (1.7ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Load (1.1ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 5], ["updated_at", "2018-02-11 08:43:45.258511"], ["id", 62]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:43:45.269244"], ["id", 61]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 AND (position > 1) ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  [1m[36mWork Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:43:45.283852"], ["id", 58]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:43:45.292375"], ["id", 53]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:43:45.303240"], ["id", 61]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:43:45.312246"], ["id", 62]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 107ms (ActiveRecord: 27.0ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:43:45 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (8.6ms)
+  Rendered shared/_head.html.erb (57.0ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 73.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/works/58/edit" for 127.0.0.1 at 2018-02-11 19:43:48 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mWork Load (3.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_works_form.html.erb (14.0ms)
+  Rendered works/edit.html.erb within layouts/application (20.7ms)
+  Rendered shared/_head.html.erb (81.3ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 136ms (Views: 122.2ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/works/58" for 127.0.0.1 at 2018-02-11 19:43:50 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QzKSo7FftYPc+VaByxEwIsSIj/7JXN37tz0rJkgj3B+p7ELjbicnzfWlsxqiMK5Y+N7u5+bcV2P4YYKcIoS6dw==", "work"=>{"title"=>"rerwr", "caption"=>"fdsffsdsfdfd", "place"=>"2"}, "commit"=>"Save changes", "id"=>"58"}
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (4.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 5], ["updated_at", "2018-02-11 08:43:50.909396"], ["id", 62]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:43:50.915149"], ["id", 61]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:43:50.918738"], ["id", 53]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:43:50.922775"], ["id", 58]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 AND (position > 1) ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  [1m[36mWork Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 0], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 1], ["updated_at", "2018-02-11 08:43:50.932151"], ["id", 58]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2018-02-11 08:43:50.938251"], ["id", 53]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 3], ["updated_at", "2018-02-11 08:43:50.943944"], ["id", 61]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Work Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."category_id" = $1 AND "works"."position" = $2 LIMIT $3[0m  [["category_id", 17], ["position", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 4], ["updated_at", "2018-02-11 08:43:50.950131"], ["id", 62]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/17
+Completed 302 Found in 96ms (ActiveRecord: 28.7ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:43:50 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (5.2ms)
+  Rendered shared/_head.html.erb (41.2ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.5ms)
+
+

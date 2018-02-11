@@ -17,7 +17,7 @@ module WorksHelper
     end
   end
 
-  def work_shuffle_delete(position, id)
+  def work_shuffle_down(position, id)
     # grabs an array of all works in this category with a higher position than the passed in position (orderd in ascending position order)
     # re-saves the position of each work IN ORDER
     cat = Category.find(id)

@@ -32,7 +32,7 @@ class WorksController < ApplicationController
     # the deleted work's position is recorded, the work is destroyed, and THEN all highert works form the same cetegory are shuffled down as far as they can be shuffled down
     deleted_position = @work.position
     @work.destroy
-    work_shuffle_delete(deleted_position, id)
+    work_shuffle_down(deleted_position, id)
 
     redirect_to category_path(id)
   end
@@ -41,8 +41,10 @@ class WorksController < ApplicationController
   end
 
   def update
+    old_place = @work.position
     if @work.update_attributes(image_info)
       save_place(@work.category, @work, @work.place.to_i)
+      work_shuffle_down(old_place, @work.category.id)
       flash[:success] = 'work updated'
       redirect_to category_path(@work.category_id)
     else
