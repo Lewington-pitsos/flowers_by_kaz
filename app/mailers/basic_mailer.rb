@@ -1,10 +1,10 @@
 class BasicMailer < ApplicationMailer
-  default from: 'lewington@student.unimelb.edu.au'
+  default from: 'altitudechess@gmail.com'
   # default is a hash with a bunch of values representing the default configureation for an email send (address, sender, subejct, etc)
 
   def welcome_email
     @url  = 'http://localhost:3000/home'
-    mail(to: 'lewington@student.unimelb.edu.au', subject: 'Welcome to My Awesome Site').deliver
+    mail(to: 'lewington@student.unimelb.edu.au', subject: 'Welcome to My Awesome Site')
   end
 
 
