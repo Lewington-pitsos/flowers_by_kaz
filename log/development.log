@@ -51741,3 +51741,999 @@ Content-Transfer-Encoding: 7bit
 </html>
 
 [ActiveJob] [ActionMailer::DeliveryJob] [eea04962-330a-48ba-8254-9c1187251f49] Performed ActionMailer::DeliveryJob (Job ID: eea04962-330a-48ba-8254-9c1187251f49) from Async(mailers) in 5170.94ms
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 21:46:29 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (2.8ms)
+  Rendered shared/_head.html.erb (89.9ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 111ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:46:46 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"lB4eoNZui9AOfX1VClHpfsASancHeXp7Q4yKu6COP7OhOeNOulESdz8ELR0SsbaNWp3Eeh4xLJ/a0VUNr0Sx0Q=="}
+[ActiveJob] [ActionMailer::DeliveryJob] [2e7c98b8-b8d5-4acc-893c-37cf2c374294] Performing ActionMailer::DeliveryJob (Job ID: 2e7c98b8-b8d5-4acc-893c-37cf2c374294) from Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now"
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 2e7c98b8-b8d5-4acc-893c-37cf2c374294) to Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now"
+Redirected to http://localhost:3000/home
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [2e7c98b8-b8d5-4acc-893c-37cf2c374294]   Rendering basic_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [2e7c98b8-b8d5-4acc-893c-37cf2c374294]   Rendered basic_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [2e7c98b8-b8d5-4acc-893c-37cf2c374294] BasicMailer#welcome_email: processed outbound mail in 23.4ms
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:46:46 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+  Rendered shared/_head.html.erb (41.6ms)
+  Rendered shared/_logo.html.erb (0.6ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [2e7c98b8-b8d5-4acc-893c-37cf2c374294] Sent mail to lewington@student.unimelb.edu.au (5122.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [2e7c98b8-b8d5-4acc-893c-37cf2c374294] Date: Sun, 11 Feb 2018 21:46:46 +1100
+From: altitudechess@gmail.com
+To: lewington@student.unimelb.edu.au
+Message-ID: <5a801f16a34e6_13dd3fbd1888295c52350@Lewington-Inspiron.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Glad you stopped by.</h1>
+    <p>
+      Thanks for Getting in Touch , we'll try to get back ASAP regarding your inquiry. We are currently handling a large volume of clientelle, but you can expect a response within 48 hours at the very latest.
+      <br>
+      All the best.
+      <br>
+      -Kaz
+    </p>
+    <p>
+      <a href="google.com">FlowersByKaz.com</a>
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [2e7c98b8-b8d5-4acc-893c-37cf2c374294] Performed ActionMailer::DeliveryJob (Job ID: 2e7c98b8-b8d5-4acc-893c-37cf2c374294) from Async(mailers) in 5149.16ms
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 21:47:07 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (2.2ms)
+  Rendered shared/_head.html.erb (107.3ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 130ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:47:09 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"RZx/oVd8vqlqm42G/wWwikU24WtSz4hza+38XupSvFNwu4JPO0MnDlvi3c7n5e9537lPZkuH3pfysCPo5ZgyMQ=="}
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 0d7d5a66-be60-4560-b782-daaf256678f0) to Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now"
+Redirected to http://localhost:3000/home
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [0d7d5a66-be60-4560-b782-daaf256678f0] Performing ActionMailer::DeliveryJob (Job ID: 0d7d5a66-be60-4560-b782-daaf256678f0) from Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now"
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:47:09 +1100
+Processing by HomeController#index as HTML
+[ActiveJob] [ActionMailer::DeliveryJob] [0d7d5a66-be60-4560-b782-daaf256678f0]   Rendering basic_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [0d7d5a66-be60-4560-b782-daaf256678f0]   Rendered basic_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering home/index.html.erb within layouts/application
+[ActiveJob] [ActionMailer::DeliveryJob] [0d7d5a66-be60-4560-b782-daaf256678f0] BasicMailer#welcome_email: processed outbound mail in 42.6ms
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+  Rendered shared/_head.html.erb (45.8ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 67ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [0d7d5a66-be60-4560-b782-daaf256678f0] Sent mail to lewington@student.unimelb.edu.au (4739.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [0d7d5a66-be60-4560-b782-daaf256678f0] Date: Sun, 11 Feb 2018 21:47:09 +1100
+From: altitudechess@gmail.com
+To: lewington@student.unimelb.edu.au
+Message-ID: <5a801f2d9ffba_13dd3fbd1888295c524a2@Lewington-Inspiron.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Glad you stopped by.</h1>
+    <p>
+      Thanks for Getting in Touch , we'll try to get back ASAP regarding your inquiry. We are currently handling a large volume of clientelle, but you can expect a response within 48 hours at the very latest.
+      <br>
+      All the best.
+      <br>
+      -Kaz
+    </p>
+    <p>
+      <a href="google.com">FlowersByKaz.com</a>
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [0d7d5a66-be60-4560-b782-daaf256678f0] Performed ActionMailer::DeliveryJob (Job ID: 0d7d5a66-be60-4560-b782-daaf256678f0) from Async(mailers) in 4786.86ms
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 21:48:55 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (0.6ms)
+  Rendered shared/_head.html.erb (47.7ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:48:57 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"pv8YWjEiA9o3lBHRmRdqBELclZBly/aug8Yvs8qn4KOT2OW0XR2afQbtQZmB9zX32FM7nXyDoEoam/AFxW1uwQ=="}
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `fsdsdf' for #<ContactController:0x00007f7a3186f530>):
+  
+app/controllers/contact_controller.rb:4:in `send_mail'
+Started PUT "/__web_console/repl_sessions/bdf2750061c18b2c02d6fd287c8e81f9" for 127.0.0.1 at 2018-02-11 21:49:01 +1100
+Started PUT "/__web_console/repl_sessions/bdf2750061c18b2c02d6fd287c8e81f9" for 127.0.0.1 at 2018-02-11 21:49:02 +1100
+Started PUT "/__web_console/repl_sessions/bdf2750061c18b2c02d6fd287c8e81f9" for 127.0.0.1 at 2018-02-11 21:49:05 +1100
+Started PUT "/__web_console/repl_sessions/bdf2750061c18b2c02d6fd287c8e81f9" for 127.0.0.1 at 2018-02-11 21:49:11 +1100
+Started PUT "/__web_console/repl_sessions/bdf2750061c18b2c02d6fd287c8e81f9" for 127.0.0.1 at 2018-02-11 21:49:16 +1100
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:52:06 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"VhNeaCgNnmqRl6Q5S/iSFpdxbV0y26x6UeK8PtJPlXtjNKOGRDIHzaDu9HFTGM3lDf7DUCuT+p7Iv2OI3YUbGQ=="}
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: contact):
+  
+app/controllers/contact_controller.rb:16:in `mail_info'
+app/controllers/contact_controller.rb:4:in `send_mail'
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:52:24 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"VhNeaCgNnmqRl6Q5S/iSFpdxbV0y26x6UeK8PtJPlXtjNKOGRDIHzaDu9HFTGM3lDf7DUCuT+p7Iv2OI3YUbGQ=="}
+Unpermitted parameter: :authenticity_token
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveJob::SerializationError (Unsupported argument type: ActionController::Parameters):
+  
+app/controllers/contact_controller.rb:4:in `send_mail'
+Started PUT "/__web_console/repl_sessions/a7b017a5be2a0920346c8e92088945e7" for 127.0.0.1 at 2018-02-11 21:53:23 +1100
+Started PUT "/__web_console/repl_sessions/a7b017a5be2a0920346c8e92088945e7" for 127.0.0.1 at 2018-02-11 21:53:24 +1100
+Started PUT "/__web_console/repl_sessions/a7b017a5be2a0920346c8e92088945e7" for 127.0.0.1 at 2018-02-11 21:53:32 +1100
+Started PUT "/__web_console/repl_sessions/a7b017a5be2a0920346c8e92088945e7" for 127.0.0.1 at 2018-02-11 21:53:33 +1100
+Unpermitted parameter: :authenticity_token
+Started PUT "/__web_console/repl_sessions/a7b017a5be2a0920346c8e92088945e7" for 127.0.0.1 at 2018-02-11 21:53:38 +1100
+Started PUT "/__web_console/repl_sessions/a7b017a5be2a0920346c8e92088945e7" for 127.0.0.1 at 2018-02-11 21:53:38 +1100
+Started PUT "/__web_console/repl_sessions/a7b017a5be2a0920346c8e92088945e7" for 127.0.0.1 at 2018-02-11 21:53:50 +1100
+Started PUT "/__web_console/repl_sessions/a7b017a5be2a0920346c8e92088945e7" for 127.0.0.1 at 2018-02-11 21:53:55 +1100
+Unpermitted parameter: :authenticity_token
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 21:54:44 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (13.4ms)
+  Rendered shared/_head.html.erb (34.5ms)
+  Rendered shared/_logo.html.erb (0.6ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 49.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/uploads/category/image/54/Hohenfriedeberg_-_Attack_of_Prussian_Infantry_-_1745.jpg" for 127.0.0.1 at 2018-02-11 21:54:44 +1100
+Started GET "/uploads/category/image/17/gallery_147289_12845_24173.jpg" for 127.0.0.1 at 2018-02-11 21:54:44 +1100
+Started GET "/uploads/category/image/51/GettyImages-73092062web-5730fb245f9b58c34cc7fca3.jpg" for 127.0.0.1 at 2018-02-11 21:54:44 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:54:44 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+  Rendered shared/_head.html.erb (34.5ms)
+  Rendered shared/_logo.html.erb (0.6ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:54:45 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_head.html.erb (33.0ms)
+  Rendered shared/_logo.html.erb (0.6ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:54:45 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_head.html.erb (32.3ms)
+  Rendered shared/_logo.html.erb (0.6ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 21:54:51 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (8.6ms)
+  Rendered shared/_head.html.erb (67.4ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 99ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:56:18 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"QEe9akw0A3vZ9h1cEbGCbPfZqpzT20PjREJeMAHD+VN1YECEIAua3OiPTRQJUd2fbVYEkcqTFQfdH4GGDgl3MQ=="}
+Unpermitted parameter: :authenticity_token
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveJob::SerializationError (Unsupported argument type: ActionController::Parameters):
+  
+app/controllers/contact_controller.rb:4:in `send_mail'
+Started PUT "/__web_console/repl_sessions/b593dcdc9b674ca9a59bc16957e2d797" for 127.0.0.1 at 2018-02-11 21:56:24 +1100
+Started PUT "/__web_console/repl_sessions/b593dcdc9b674ca9a59bc16957e2d797" for 127.0.0.1 at 2018-02-11 21:56:26 +1100
+Started PUT "/__web_console/repl_sessions/b593dcdc9b674ca9a59bc16957e2d797" for 127.0.0.1 at 2018-02-11 21:56:31 +1100
+Unpermitted parameter: :authenticity_token
+Started GET "/admins/new" for 127.0.0.1 at 2018-02-11 21:57:56 +1100
+Processing by AdminsController#new as HTML
+  Rendering admins/new.html.erb within layouts/application
+  Rendered admins/new.html.erb within layouts/application (10.8ms)
+  Rendered shared/_head.html.erb (42.3ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 59.4ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/admins" for 127.0.0.1 at 2018-02-11 21:57:57 +1100
+Processing by AdminsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kLCNcquwDhiMwZAex3WXYOt2/AiHWOSe7iVTg2IVC3Sll3Ccx4+Xv724wFbflciTcflSBZ4Qsnp3eIw1bd+FFg==", "admin"=>{"username"=>"kaz123", "password"=>"[FILTERED]", "stay_signed_in"=>"1"}, "commit"=>"Sign in"}
+  [1m[36mAdmin Load (2.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[36mCACHE Admin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "admins" SET "encrypted_token" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["encrypted_token", "0cb5ce9743e699c90684d2226369ba1bb4c1268c"], ["updated_at", "2018-02-11 10:57:57.681644"], ["id", 7]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 51ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 21:57:57 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (19.1ms)
+  Rendered shared/_head.html.erb (45.0ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 81ms (Views: 67.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/uploads/category/image/54/Hohenfriedeberg_-_Attack_of_Prussian_Infantry_-_1745.jpg" for 127.0.0.1 at 2018-02-11 21:57:57 +1100
+Started GET "/uploads/category/image/17/gallery_147289_12845_24173.jpg" for 127.0.0.1 at 2018-02-11 21:57:57 +1100
+Started GET "/uploads/category/image/51/GettyImages-73092062web-5730fb245f9b58c34cc7fca3.jpg" for 127.0.0.1 at 2018-02-11 21:57:57 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:57:57 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  Rendered shared/_head.html.erb (49.7ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (1.6ms)
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:57:57 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_head.html.erb (51.3ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:57:58 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_head.html.erb (46.4ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/17/edit" for 127.0.0.1 at 2018-02-11 21:57:59 +1100
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/edit.html.erb within layouts/application (11.4ms)
+  Rendered shared/_head.html.erb (72.7ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 108ms (Views: 95.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 21:58:47 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (2.1ms)
+  Rendered shared/_head.html.erb (68.2ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 92ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:58:58 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"KbO9fEwKV5SKASJJzUVKZdIm0Sr1V7JKXOrYp7prR38clECSIDXOM7t4cgHVpRWWSKl/J+wf5K7FtwcRtaHJHQ==", "email"=>"sdfsdf@asdas.com"}
+Unpermitted parameter: :authenticity_token
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveJob::SerializationError (Unsupported argument type: ActionController::Parameters):
+  
+app/controllers/contact_controller.rb:4:in `send_mail'
+Started PUT "/__web_console/repl_sessions/ce8ac5994908848d73a30c45fd298364" for 127.0.0.1 at 2018-02-11 21:59:01 +1100
+Started PUT "/__web_console/repl_sessions/ce8ac5994908848d73a30c45fd298364" for 127.0.0.1 at 2018-02-11 21:59:02 +1100
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:59:34 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"F2tPNBa3zAd4BxN+eYq1Tjprk6aEl86Zix/xESJEQ5wiTLLaeohVoEl+QzZhauq9oOQ9q53fmH0SQi6nLY7N/g==", "email"=>"sdfsdf@asdas.com"}
+Unpermitted parameter: :authenticity_token
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveJob::SerializationError (Unsupported argument type: ActionController::Parameters):
+  
+app/controllers/contact_controller.rb:4:in `send_mail'
+Started PUT "/__web_console/repl_sessions/cb3ffaf1118005abb1acb88f17a62447" for 127.0.0.1 at 2018-02-11 21:59:37 +1100
+Started PUT "/__web_console/repl_sessions/cb3ffaf1118005abb1acb88f17a62447" for 127.0.0.1 at 2018-02-11 21:59:37 +1100
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 21:59:49 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (3.0ms)
+  Rendered shared/_head.html.erb (93.0ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.9ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 114ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:59:55 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"hHuDl0bSnnG/STB+JxQ8UhqJcGaYk7UVNiIEus6WhZWxXH55Ku0H1o4wYDY/9GOhgAbea4Hb4/Gvf9sMwVwL9w==", "email"=>"lewington@student.unimelb.edu.au", "name"=>"dasdsa adasd", "content"=>"asdddddd d dd"}
+Unpermitted parameter: :authenticity_token
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveJob::SerializationError (Unsupported argument type: ActionController::Parameters):
+  
+app/controllers/contact_controller.rb:4:in `send_mail'
+Started PUT "/__web_console/repl_sessions/af962221a968672276b077d07fbecf8a" for 127.0.0.1 at 2018-02-11 21:59:58 +1100
+Started PUT "/__web_console/repl_sessions/af962221a968672276b077d07fbecf8a" for 127.0.0.1 at 2018-02-11 21:59:58 +1100
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 22:01:25 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_head.html.erb (46.6ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (1.1ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 22:01:27 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"nZrZo7Osl++XmM1ZijmAMgrruwJqdedU00ymvBzf6IGovSRN35MOSKbhnRGS2d/BkGQVD3M9sbBKEXkKExVm4w==", "email"=>"", "name"=>"", "content"=>""}
+Unpermitted parameter: :authenticity_token
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name' for #<ActionController::Parameters:0x00007f7a309ea6b8>):
+  
+app/controllers/contact_controller.rb:4:in `send_mail'
+Started PUT "/__web_console/repl_sessions/d48f386d39f5b12c9512fd3613faa5c0" for 127.0.0.1 at 2018-02-11 22:01:36 +1100
+Started PUT "/__web_console/repl_sessions/d48f386d39f5b12c9512fd3613faa5c0" for 127.0.0.1 at 2018-02-11 22:01:38 +1100
+Unpermitted parameter: :authenticity_token
+Started PUT "/__web_console/repl_sessions/d48f386d39f5b12c9512fd3613faa5c0" for 127.0.0.1 at 2018-02-11 22:01:42 +1100
+Unpermitted parameter: :authenticity_token
+Unpermitted parameter: :authenticity_token
+Started PUT "/__web_console/repl_sessions/d48f386d39f5b12c9512fd3613faa5c0" for 127.0.0.1 at 2018-02-11 22:01:45 +1100
+Unpermitted parameter: :authenticity_token
+Started PUT "/__web_console/repl_sessions/d48f386d39f5b12c9512fd3613faa5c0" for 127.0.0.1 at 2018-02-11 22:01:51 +1100
+Unpermitted parameter: :authenticity_token
+Started PUT "/__web_console/repl_sessions/d48f386d39f5b12c9512fd3613faa5c0" for 127.0.0.1 at 2018-02-11 22:02:00 +1100
+Started PUT "/__web_console/repl_sessions/d48f386d39f5b12c9512fd3613faa5c0" for 127.0.0.1 at 2018-02-11 22:02:02 +1100
+Unpermitted parameter: :authenticity_token
+Started PUT "/__web_console/repl_sessions/d48f386d39f5b12c9512fd3613faa5c0" for 127.0.0.1 at 2018-02-11 22:02:06 +1100
+Unpermitted parameter: :authenticity_token
+Started PUT "/__web_console/repl_sessions/d48f386d39f5b12c9512fd3613faa5c0" for 127.0.0.1 at 2018-02-11 22:02:26 +1100
+Unpermitted parameter: :authenticity_token
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 22:02:39 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"nZrZo7Osl++XmM1ZijmAMgrruwJqdedU00ymvBzf6IGovSRN35MOSKbhnRGS2d/BkGQVD3M9sbBKEXkKExVm4w==", "email"=>"dsadasadssd@asdas.com", "name"=>"", "content"=>""}
+Unpermitted parameter: :authenticity_token
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name' for #<ActionController::Parameters:0x00007f7a31a8d470>):
+  
+app/controllers/contact_controller.rb:4:in `send_mail'
+Started PUT "/__web_console/repl_sessions/05d864259437a7e1ea54611583c09ebf" for 127.0.0.1 at 2018-02-11 22:02:44 +1100
+Started PUT "/__web_console/repl_sessions/05d864259437a7e1ea54611583c09ebf" for 127.0.0.1 at 2018-02-11 22:02:48 +1100
+Unpermitted parameter: :authenticity_token
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 22:03:17 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"nZrZo7Osl++XmM1ZijmAMgrruwJqdedU00ymvBzf6IGovSRN35MOSKbhnRGS2d/BkGQVD3M9sbBKEXkKExVm4w==", "email"=>"lewington@student.unimelb.edu.au", "name"=>"asdasd aasd as", "content"=>"a sdasd das asdas"}
+Unpermitted parameter: :authenticity_token
+Unpermitted parameter: :authenticity_token
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: c77bd3e5-8020-425e-bada-e15cae918619) to Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now", "asdasd aasd as", "lewington@student.unimelb.edu.au"
+Redirected to http://localhost:3000/home
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [c77bd3e5-8020-425e-bada-e15cae918619] Performing ActionMailer::DeliveryJob (Job ID: c77bd3e5-8020-425e-bada-e15cae918619) from Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now", "asdasd aasd as", "lewington@student.unimelb.edu.au"
+Started GET "/home" for 127.0.0.1 at 2018-02-11 22:03:18 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [c77bd3e5-8020-425e-bada-e15cae918619]   Rendering basic_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [c77bd3e5-8020-425e-bada-e15cae918619]   Rendered basic_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [c77bd3e5-8020-425e-bada-e15cae918619] BasicMailer#welcome_email: processed outbound mail in 18.7ms
+  Rendered shared/_head.html.erb (46.5ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [c77bd3e5-8020-425e-bada-e15cae918619] Sent mail to lewington@student.unimelb.edu.au (5616.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [c77bd3e5-8020-425e-bada-e15cae918619] Date: Sun, 11 Feb 2018 22:03:18 +1100
+From: altitudechess@gmail.com
+To: lewington@student.unimelb.edu.au
+Message-ID: <5a8022f6baaf_13dd3fbd1888295c52591@Lewington-Inspiron.mail>
+Subject: FlowersByKaz received your email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Glad you stopped by.</h1>
+    <p>
+      Thanks for tetting in touch asdasd aasd as, we'll try to get back ASAP regarding your inquiry. We are currently handling a large volume of clientelle, but you can expect a response within 48 hours at the very latest.
+    </p>
+    <p>All the best.</p>
+    <p>-Kaz</p>
+    <p>
+      <a href="google.com">FlowersByKaz.com</a>
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [c77bd3e5-8020-425e-bada-e15cae918619] Performed ActionMailer::DeliveryJob (Job ID: c77bd3e5-8020-425e-bada-e15cae918619) from Async(mailers) in 5647.39ms
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 22:12:24 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (0.6ms)
+  Rendered shared/_head.html.erb (41.6ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 22:12:38 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"VgvhBbyINHVLAtQ21E0Fq4sE/XzYZPnyS4gdTa0jrbZjLBzr0Let0np7hH7MrVpYEYtTccEsrxbS1cL7oukj1A==", "email"=>"lewington@student.unimelb.edu.au", "name"=>"frank miller", "content"=>"go die in a hole"}
+Unpermitted parameter: :authenticity_token
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveJob::SerializationError (Unsupported argument type: ActionController::Parameters):
+  
+app/controllers/contact_controller.rb:5:in `send_mail'
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 22:15:19 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"qEKEZXSbDIiKHT4urqs5frGUTq1UNLtvi4MgyoinJcqdZXmLGKSVL7tkbma2S2aNKxvgoE187YsS3v98h22rqA==", "email"=>"lewington@student.unimelb.edu.au", "name"=>"frank miller", "content"=>"go die in a hole"}
+Unpermitted parameter: :authenticity_token
+Unpermitted parameter: :authenticity_token
+Unpermitted parameter: :authenticity_token
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: cc2bb7f6-3b7e-4139-b58c-8b4f502595f4) to Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now", {:email=>"lewington@student.unimelb.edu.au", :name=>"frank miller", :content=>"go die in a hole"}
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: ac5bcc4d-6ea4-4912-91c2-4dc626c59f03) to Async(mailers) with arguments: "BasicMailer", "inquiry", "deliver_now", {:email=>"lewington@student.unimelb.edu.au", :name=>"frank miller", :content=>"go die in a hole"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [cc2bb7f6-3b7e-4139-b58c-8b4f502595f4] Performing ActionMailer::DeliveryJob (Job ID: cc2bb7f6-3b7e-4139-b58c-8b4f502595f4) from Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now", {:email=>"lewington@student.unimelb.edu.au", :name=>"frank miller", :content=>"go die in a hole"}
+Started GET "/home" for 127.0.0.1 at 2018-02-11 22:15:20 +1100
+[ActiveJob] [ActionMailer::DeliveryJob] [ac5bcc4d-6ea4-4912-91c2-4dc626c59f03] Performing ActionMailer::DeliveryJob (Job ID: ac5bcc4d-6ea4-4912-91c2-4dc626c59f03) from Async(mailers) with arguments: "BasicMailer", "inquiry", "deliver_now", {:email=>"lewington@student.unimelb.edu.au", :name=>"frank miller", :content=>"go die in a hole"}
+Processing by HomeController#index as HTML
+[ActiveJob] [ActionMailer::DeliveryJob] [cc2bb7f6-3b7e-4139-b58c-8b4f502595f4] BasicMailer#welcome_email: processed outbound mail in 3.8ms
+[ActiveJob] [ActionMailer::DeliveryJob] [cc2bb7f6-3b7e-4139-b58c-8b4f502595f4] Error performing ActionMailer::DeliveryJob (Job ID: cc2bb7f6-3b7e-4139-b58c-8b4f502595f4) from Async(mailers) in 26.05ms: NameError (undefined local variable or method `email' for #<BasicMailer:0x00007f7a30393670>
+Did you mean?  mail):
+/home/lewington/xxx/rails/flowers_by_kaz/app/mailers/basic_mailer.rb:7:in `welcome_email'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:186:in `process_action'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:124:in `process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:23:in `block in process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:22:in `process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionview-5.1.4/lib/action_view/rendering.rb:30:in `process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:609:in `block in process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:608:in `process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:105:in `block in processed_mailer'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:104:in `tap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:104:in `processed_mailer'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/delivery_job.rb:14:in `perform'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/execution.rb:37:in `block in perform_now'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/i18n-0.9.3/lib/i18n.rb:268:in `with_locale'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `block in tag_logger'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `tag_logger'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/execution.rb:33:in `perform_now'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/execution.rb:22:in `block in execute'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:68:in `block in wrap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:67:in `wrap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/execution.rb:20:in `execute'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  Rendering home/index.html.erb within layouts/application
+[ActiveJob] [ActionMailer::DeliveryJob] [ac5bcc4d-6ea4-4912-91c2-4dc626c59f03]   Rendering basic_mailer/inquiry.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [ac5bcc4d-6ea4-4912-91c2-4dc626c59f03]   Rendered basic_mailer/inquiry.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ac5bcc4d-6ea4-4912-91c2-4dc626c59f03] BasicMailer#inquiry: processed outbound mail in 14.7ms
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  Rendered shared/_head.html.erb (57.5ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [ac5bcc4d-6ea4-4912-91c2-4dc626c59f03] Sent mail to lewington@student.unimelb.edu.au (6131.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ac5bcc4d-6ea4-4912-91c2-4dc626c59f03] Date: Sun, 11 Feb 2018 22:15:20 +1100
+From: altitudechess@gmail.com
+To: lewington@student.unimelb.edu.au
+Message-ID: <5a8025c814bdc_13dd3fbd183b3340526d3@Lewington-Inspiron.mail>
+Subject: Message from frank miller via flowersbykaz.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Yo, so looks like frank miller (lewington@student.unimelb.edu.au) Sent you an inquiry:</h1>
+    <p>
+      go die in a hole
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [ac5bcc4d-6ea4-4912-91c2-4dc626c59f03] Performed ActionMailer::DeliveryJob (Job ID: ac5bcc4d-6ea4-4912-91c2-4dc626c59f03) from Async(mailers) in 6164.65ms
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 22:15:48 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (3.0ms)
+  Rendered shared/_head.html.erb (97.6ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 123ms (Views: 119.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 22:15:50 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"HuqDaahuY4C2UYhBTVdGnfInZmIRun6+CRG7B0gglRMrzX6HxFH6J4co2AlVtxluaKjIbwjyKFqQTGSxR+obcQ==", "email"=>"", "name"=>"", "content"=>""}
+Unpermitted parameter: :authenticity_token
+Unpermitted parameter: :authenticity_token
+Unpermitted parameter: :authenticity_token
+[ActiveJob] [ActionMailer::DeliveryJob] [cdb461ad-fef3-4ceb-b72f-462ffcd184d8] Performing ActionMailer::DeliveryJob (Job ID: cdb461ad-fef3-4ceb-b72f-462ffcd184d8) from Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now", {:email=>"", :name=>"", :content=>""}
+[ActiveJob] [ActionMailer::DeliveryJob] [cdb461ad-fef3-4ceb-b72f-462ffcd184d8] BasicMailer#welcome_email: processed outbound mail in 3.1ms
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: cdb461ad-fef3-4ceb-b72f-462ffcd184d8) to Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now", {:email=>"", :name=>"", :content=>""}
+[ActiveJob] [ActionMailer::DeliveryJob] [cdb461ad-fef3-4ceb-b72f-462ffcd184d8] Error performing ActionMailer::DeliveryJob (Job ID: cdb461ad-fef3-4ceb-b72f-462ffcd184d8) from Async(mailers) in 3.88ms: NameError (undefined local variable or method `email' for #<BasicMailer:0x0000562296f55b40>
+Did you mean?  mail):
+/home/lewington/xxx/rails/flowers_by_kaz/app/mailers/basic_mailer.rb:7:in `welcome_email'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:186:in `process_action'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/abstract_controller/base.rb:124:in `process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:23:in `block in process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/rescuable.rb:22:in `process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionview-5.1.4/lib/action_view/rendering.rb:30:in `process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:609:in `block in process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/base.rb:608:in `process'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:105:in `block in processed_mailer'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:104:in `tap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:104:in `processed_mailer'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionmailer-5.1.4/lib/action_mailer/delivery_job.rb:14:in `perform'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/execution.rb:37:in `block in perform_now'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/i18n-0.9.3/lib/i18n.rb:268:in `with_locale'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/notifications.rb:166:in `instrument'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `block in tag_logger'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:44:in `tag_logger'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/execution.rb:33:in `perform_now'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/execution.rb:22:in `block in execute'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:68:in `block in wrap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/reloader.rb:67:in `wrap'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activesupport-5.1.4/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/execution.rb:20:in `execute'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activejob-5.1.4/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/lewington/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 45efb98b-b54c-41ae-a882-785403969077) to Async(mailers) with arguments: "BasicMailer", "inquiry", "deliver_now", {:email=>"", :name=>"", :content=>""}
+[ActiveJob] [ActionMailer::DeliveryJob] [45efb98b-b54c-41ae-a882-785403969077] Performing ActionMailer::DeliveryJob (Job ID: 45efb98b-b54c-41ae-a882-785403969077) from Async(mailers) with arguments: "BasicMailer", "inquiry", "deliver_now", {:email=>"", :name=>"", :content=>""}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [45efb98b-b54c-41ae-a882-785403969077]   Rendering basic_mailer/inquiry.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [45efb98b-b54c-41ae-a882-785403969077]   Rendered basic_mailer/inquiry.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [45efb98b-b54c-41ae-a882-785403969077] BasicMailer#inquiry: processed outbound mail in 6.9ms
+Started GET "/home" for 127.0.0.1 at 2018-02-11 22:15:50 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered shared/_head.html.erb (52.5ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [45efb98b-b54c-41ae-a882-785403969077] Sent mail to lewington@student.unimelb.edu.au (4748.7ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [45efb98b-b54c-41ae-a882-785403969077] Date: Sun, 11 Feb 2018 22:15:50 +1100
+From: altitudechess@gmail.com
+To: lewington@student.unimelb.edu.au
+Message-ID: <5a8025e635c5e_13dd3fbd1888295c52761@Lewington-Inspiron.mail>
+Subject: Message from  via flowersbykaz.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Yo, so looks like  () Sent you an inquiry:</h1>
+    <p>
+      
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [45efb98b-b54c-41ae-a882-785403969077] Performed ActionMailer::DeliveryJob (Job ID: 45efb98b-b54c-41ae-a882-785403969077) from Async(mailers) in 4759.61ms
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 22:17:09 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_head.html.erb (41.5ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (1.8ms)
+  Rendered shared/_header.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 22:17:24 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"kHMoUXMzJlwuTdJiqjzo+blr9cXL607mwfD7QoHl9RqlVNW/Hwy/+x80giqy3LcKI+RbyNKjGAJYrST0ji97eA==", "email"=>"altitudechess@gmail.com", "name"=>"asd asdads", "content"=>"dasdnasdiusfanuasdu9asdsadsdabuadsbiudas aasd sa"}
+Unpermitted parameter: :authenticity_token
+Unpermitted parameter: :authenticity_token
+Unpermitted parameter: :authenticity_token
+[ActiveJob] [ActionMailer::DeliveryJob] [f13173c7-1d2c-47f5-8ee9-b964c831384b] Performing ActionMailer::DeliveryJob (Job ID: f13173c7-1d2c-47f5-8ee9-b964c831384b) from Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now", {:email=>"altitudechess@gmail.com", :name=>"asd asdads", :content=>"dasdnasdiusfanuasdu9asdsadsdabuadsbiudas aasd sa"}
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: f13173c7-1d2c-47f5-8ee9-b964c831384b) to Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now", {:email=>"altitudechess@gmail.com", :name=>"asd asdads", :content=>"dasdnasdiusfanuasdu9asdsadsdabuadsbiudas aasd sa"}
+[ActiveJob] [ActionMailer::DeliveryJob] [f13173c7-1d2c-47f5-8ee9-b964c831384b]   Rendering basic_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 0421c7d0-4ebb-49c1-ac22-1febed02d075) to Async(mailers) with arguments: "BasicMailer", "inquiry", "deliver_now", {:email=>"altitudechess@gmail.com", :name=>"asd asdads", :content=>"dasdnasdiusfanuasdu9asdsadsdabuadsbiudas aasd sa"}
+[ActiveJob] [ActionMailer::DeliveryJob] [f13173c7-1d2c-47f5-8ee9-b964c831384b]   Rendered basic_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [0421c7d0-4ebb-49c1-ac22-1febed02d075] Performing ActionMailer::DeliveryJob (Job ID: 0421c7d0-4ebb-49c1-ac22-1febed02d075) from Async(mailers) with arguments: "BasicMailer", "inquiry", "deliver_now", {:email=>"altitudechess@gmail.com", :name=>"asd asdads", :content=>"dasdnasdiusfanuasdu9asdsadsdabuadsbiudas aasd sa"}
+Redirected to http://localhost:3000/home
+[ActiveJob] [ActionMailer::DeliveryJob] [f13173c7-1d2c-47f5-8ee9-b964c831384b] BasicMailer#welcome_email: processed outbound mail in 9.1ms
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [0421c7d0-4ebb-49c1-ac22-1febed02d075]   Rendering basic_mailer/inquiry.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [0421c7d0-4ebb-49c1-ac22-1febed02d075]   Rendered basic_mailer/inquiry.html.erb within layouts/mailer (0.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [0421c7d0-4ebb-49c1-ac22-1febed02d075] BasicMailer#inquiry: processed outbound mail in 8.7ms
+Started GET "/home" for 127.0.0.1 at 2018-02-11 22:17:24 +1100
+[ActiveJob] [ActionMailer::DeliveryJob] [0421c7d0-4ebb-49c1-ac22-1febed02d075] Sent mail to lewington@student.unimelb.edu.au (4475.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [0421c7d0-4ebb-49c1-ac22-1febed02d075] Date: Sun, 11 Feb 2018 22:17:24 +1100
+From: altitudechess@gmail.com
+To: lewington@student.unimelb.edu.au
+Message-ID: <5a802644948d1_13dd3fbd18a320e0529dd@Lewington-Inspiron.mail>
+Subject: Message from asd asdads via flowersbykaz.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h5>Yo, so looks like asd asdads (altitudechess@gmail.com) Sent you an inquiry:</h5>
+    <p>
+      dasdnasdiusfanuasdu9asdsadsdabuadsbiudas aasd sa
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [0421c7d0-4ebb-49c1-ac22-1febed02d075] Performed ActionMailer::DeliveryJob (Job ID: 0421c7d0-4ebb-49c1-ac22-1febed02d075) from Async(mailers) in 4485.38ms
+[ActiveJob] [ActionMailer::DeliveryJob] [f13173c7-1d2c-47f5-8ee9-b964c831384b] Sent mail to altitudechess@gmail.com (5190.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [f13173c7-1d2c-47f5-8ee9-b964c831384b] Date: Sun, 11 Feb 2018 22:17:24 +1100
+From: altitudechess@gmail.com
+To: altitudechess@gmail.com
+Message-ID: <5a8026449391f_13dd3fbd1888295c528c8@Lewington-Inspiron.mail>
+Subject: FlowersByKaz has received your email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Glad you stopped by.</h1>
+    <p>
+      Thanks for tetting in touch asd asdads, we'll try to get back ASAP regarding your inquiry. We are currently handling a large volume of clientelle, but you can expect a response within 48 hours at the very latest.
+    </p>
+    <p>All the best.</p>
+    <p>-Kaz</p>
+    <p>
+      <a href="google.com">FlowersByKaz.com</a>
+    </p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [f13173c7-1d2c-47f5-8ee9-b964c831384b] Performed ActionMailer::DeliveryJob (Job ID: f13173c7-1d2c-47f5-8ee9-b964c831384b) from Async(mailers) in 5206.44ms
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.2ms)
+  Rendered shared/_head.html.erb (48.5ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
