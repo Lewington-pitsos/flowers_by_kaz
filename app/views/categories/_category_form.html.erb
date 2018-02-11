@@ -4,7 +4,8 @@
   <br />
 
   <%= f.label 'Category cover image:' %>
-  <%= f.file_field :image %>
+  <%= f.file_field :image, class: 'file-upload' %>
+  <%= render '/shared/hidden_loader' %>
   <br />
 
   <%= f.label 'Place (1 = first place, 2 = second, etc...):' %>
