@@ -41,6 +41,8 @@ class WorksController < ApplicationController
   end
 
   def update
+    # record the old position and check if the inputs make sense
+    # if so, save the works being updated to the new position, shuffle all the worksdown that can be shuffled down and rerout to the page for the current category
     old_place = @work.position
     if @work.update_attributes(image_info)
       save_place(@work.category, @work, @work.place.to_i)

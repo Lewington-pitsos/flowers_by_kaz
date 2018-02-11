@@ -18,7 +18,7 @@ module CategoriesHelper
     end
   end
 
-  def cat_shuffle_delete(position)
+  def cat_shuffle_down(position)
     # grabs an array of all cats with a higher position than the passed in positione (orderd in ascending position order)
     # re-saves the position of each category IN ORDER
     Category.where("position > ?", position)
