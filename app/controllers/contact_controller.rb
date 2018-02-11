@@ -9,4 +9,10 @@ class ContactController < ApplicationController
   def index
 
   end
+
+  private
+
+  def mail_info
+    params.require(:contact).permit(:address, :name, :content)
+  end
 end
