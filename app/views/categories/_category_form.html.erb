@@ -1,0 +1,22 @@
+<%= form_for @category do |f| %>
+  <%= f.label 'Category title:' %>
+  <%= f.text_field :title %>
+  <br />
+
+  <%= f.label 'Category cover image:' %>
+  <%= f.file_field :image, class: 'file-upload' %>
+  <%= render '/shared/hidden_loader' %>
+  <br />
+
+  <%= f.label 'Place (1 = first place, 2 = second, etc...):' %>
+  <%= f.number_field :place, value: @category.position || 1 %>
+  <br />
+  
+  <div class="position-relative">
+    <%= f.submit 'Save changes' %>
+    <div class="overlay white opaque hover-reveal hidden" id="upload-helper">
+      Wait, file still uploading...
+    </div>
+  </div>
+
+<% end %>

@@ -1,3 +1,13 @@
+function fadeAndHide(selector, time = 500) {
+  // fades the element out over a certain period and one milisecond later styles it to be invisible to the DOM
+  $element = $(selector);
+  $element.fadeTo(time, 0);
+  setTimeout(function() {
+    $element.addClass('hidden');
+    // you'll need to have some CSS for the .hidden class
+  }, time + 1)
+}
+
 function fadeInIfVisible(elements) {
   // takes in a collection of JQuery elements
   // works out the current height of the visible window's bottom
@@ -39,4 +49,9 @@ $(window).on('turbolinks:load', function() {
       fadeInIfVisible(hiddenServiceElements);
     });
   }
+
+  // fade out all flashes after 10 seconds
+  setTimeout(function() {
+    fadeAndHide('.flash');
+  }, 10000)
 })
