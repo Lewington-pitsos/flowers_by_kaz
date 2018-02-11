@@ -11,5 +11,12 @@
   <%= f.label 'Place (1 = first place, 2 = second, etc...):' %>
   <%= f.number_field :place, value: @category.position || 1 %>
   <br />
-  <%= f.submit 'Save Changes' %>
+  
+  <div class="position-relative">
+    <%= f.submit 'Save changes' %>
+    <div class="overlay white opaque hover-reveal hidden" id="upload-helper">
+      Wait, file still uploading...
+    </div>
+  </div>
+
 <% end %>
