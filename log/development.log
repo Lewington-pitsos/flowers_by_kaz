@@ -51583,3 +51583,161 @@ Content-Transfer-Encoding: 7bit
 </html>
 
 [ActiveJob] [ActionMailer::DeliveryJob] [057a4f22-e7e2-479b-9f6e-ebf1c791ed3d] Performed ActionMailer::DeliveryJob (Job ID: 057a4f22-e7e2-479b-9f6e-ebf1c791ed3d) from Async(mailers) in 2344.92ms
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 21:37:58 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (0.5ms)
+  Rendered shared/_head.html.erb (123.8ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 135ms (Views: 133.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:38:00 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"+7sEeTjXqrlt0Z87MYJA6CTXq86Bd0CrAY9gVdTWzILOnPmXVOgzHlyoz3MpYh8bvlgFw5g/Fk+Y0r/j2xxC4A=="}
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: c8fd6e18-1f6d-4c30-926d-58497baa448c) to Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now"
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [c8fd6e18-1f6d-4c30-926d-58497baa448c] Performing ActionMailer::DeliveryJob (Job ID: c8fd6e18-1f6d-4c30-926d-58497baa448c) from Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [c8fd6e18-1f6d-4c30-926d-58497baa448c]   Rendering basic_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [c8fd6e18-1f6d-4c30-926d-58497baa448c]   Rendered basic_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [c8fd6e18-1f6d-4c30-926d-58497baa448c] BasicMailer#welcome_email: processed outbound mail in 4.9ms
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:38:00 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_head.html.erb (62.1ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [c8fd6e18-1f6d-4c30-926d-58497baa448c] Sent mail to lewington@student.unimelb.edu.au (5705.8ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [c8fd6e18-1f6d-4c30-926d-58497baa448c] Date: Sun, 11 Feb 2018 21:38:00 +1100
+From: altitudechess@gmail.com
+To: lewington@student.unimelb.edu.au
+Message-ID: <5a801d08b8ff1_13dd3fbd1888295c521f6@Lewington-Inspiron.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to example.com, </h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: <br>
+    </p>
+    <p>
+      To login to the site, just follow this link: http://localhost:3000/home.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [c8fd6e18-1f6d-4c30-926d-58497baa448c] Performed ActionMailer::DeliveryJob (Job ID: c8fd6e18-1f6d-4c30-926d-58497baa448c) from Async(mailers) in 5711.25ms
+Started GET "/contact" for 127.0.0.1 at 2018-02-11 21:38:47 +1100
+Processing by ContactController#index as HTML
+  Rendering contact/index.html.erb within layouts/application
+  Rendered contact/index.html.erb within layouts/application (0.6ms)
+  Rendered shared/_head.html.erb (50.6ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_mail" for 127.0.0.1 at 2018-02-11 21:38:49 +1100
+Processing by ContactController#send_mail as HTML
+  Parameters: {"authenticity_token"=>"NE49kOyaRPlKH+acMH8qNqcFUD7+F6YvwdlKPAnnZEsBacB+gKXdXntmttQon3XFPYr+M+df8MtYhJWKBi3qKQ=="}
+[ActiveJob] [ActionMailer::DeliveryJob] [eea04962-330a-48ba-8254-9c1187251f49] Performing ActionMailer::DeliveryJob (Job ID: eea04962-330a-48ba-8254-9c1187251f49) from Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now"
+[ActiveJob] [ActionMailer::DeliveryJob] [eea04962-330a-48ba-8254-9c1187251f49]   Rendering basic_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [eea04962-330a-48ba-8254-9c1187251f49]   Rendered basic_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [eea04962-330a-48ba-8254-9c1187251f49] BasicMailer#welcome_email: processed outbound mail in 5.9ms
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: eea04962-330a-48ba-8254-9c1187251f49) to Async(mailers) with arguments: "BasicMailer", "welcome_email", "deliver_now"
+Redirected to http://localhost:3000/home
+Completed 302 Found in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:38:49 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered shared/_head.html.erb (51.0ms)
+  Rendered shared/_logo.html.erb (1.1ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [eea04962-330a-48ba-8254-9c1187251f49] Sent mail to lewington@student.unimelb.edu.au (5164.2ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [eea04962-330a-48ba-8254-9c1187251f49] Date: Sun, 11 Feb 2018 21:38:49 +1100
+From: altitudechess@gmail.com
+To: lewington@student.unimelb.edu.au
+Message-ID: <5a801d39bbccf_13dd3fbd1888295c52225@Lewington-Inspiron.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to example.com, </h1>
+    <p>
+      You have successfully signed up to example.com,
+      your username is: <br>
+    </p>
+    <p>
+      To login to the site, just follow this link: http://localhost:3000/home.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [eea04962-330a-48ba-8254-9c1187251f49] Performed ActionMailer::DeliveryJob (Job ID: eea04962-330a-48ba-8254-9c1187251f49) from Async(mailers) in 5170.94ms
