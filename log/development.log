@@ -13518,3 +13518,287 @@ Processing by ServicesController#index as HTML
 Completed 200 OK in 99ms (Views: 94.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-11 19:10:29 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#authorize as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "admins" SET "encrypted_token" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["encrypted_token", "0edc7d52489de8337a66588938d8481bcc77dff0"], ["updated_at", "2018-02-11 08:10:29.277191"], ["id", 7]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 28ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-11 19:10:29 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (344.7ms)
+  Rendered shared/_head.html.erb (44.1ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 398ms (Views: 397.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:10:42 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (14.5ms)
+  Rendered shared/_head.html.erb (43.8ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 84ms (Views: 61.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/uploads/category/image/17/Markdowns-56a7f71d5f9b58b7d0efaf75.jpg" for 127.0.0.1 at 2018-02-11 19:10:42 +1100
+Started GET "/uploads/category/image/46/harem.jpg" for 127.0.0.1 at 2018-02-11 19:10:42 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-11 19:10:42 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered shared/_head.html.erb (46.1ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-11 19:10:42 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_head.html.erb (41.1ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:10:48 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (15.5ms)
+  Rendered shared/_head.html.erb (109.9ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 148ms (Views: 141.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/uploads/category/image/17/Markdowns-56a7f71d5f9b58b7d0efaf75.jpg" for 127.0.0.1 at 2018-02-11 19:10:48 +1100
+Started GET "/uploads/category/image/46/harem.jpg" for 127.0.0.1 at 2018-02-11 19:10:48 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-11 19:10:48 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_head.html.erb (43.2ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (1.0ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-11 19:10:48 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_head.html.erb (49.6ms)
+  Rendered shared/_logo.html.erb (1.0ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/categories/46" for 127.0.0.1 at 2018-02-11 19:10:51 +1100
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Jw6gGacKtkdOmsBAAT03zN8VCSIqs4QJ1RLx3A0jUyTN0HBZeHIkCWfGJdtoHKm240NoOwUzDpGaTlhmZ4Q1TA==", "id"=>"46"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 46]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 43ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:10:51 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (6.4ms)
+  Rendered shared/_head.html.erb (74.9ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (5.0ms)
+  Rendered shared/_header.html.erb (5.7ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 98ms (Views: 94.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/uploads/category/image/17/Markdowns-56a7f71d5f9b58b7d0efaf75.jpg" for 127.0.0.1 at 2018-02-11 19:10:51 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-11 19:10:51 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+  Rendered shared/_head.html.erb (43.5ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/categories/17" for 127.0.0.1 at 2018-02-11 19:10:52 +1100
+Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LIUx24kQXE+4E5ZODG+cWXx+iY5LZiOANGP5jA2uR1DGW+GbVmjOAZFPc9VlTgIjQCjol2TmqRh7P1A2ZwkhOA==", "id"=>"17"}
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.0ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 12.5ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  update or delete on table "categories" violates foreign key constraint "fk_rails_c5bab402b7" on table "works"
+DETAIL:  Key (id)=(17) is still referenced from table "works".
+: DELETE FROM "categories" WHERE "categories"."id" = $1):
+  
+app/controllers/categories_controller.rb:43:in `destroy'
+Started DELETE "/admins/kaz123" for 127.0.0.1 at 2018-02-11 19:11:00 +1100
+Processing by AdminsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LIUx24kQXE+4E5ZODG+cWXx+iY5LZiOANGP5jA2uR1DGW+GbVmjOAZFPc9VlTgIjQCjol2TmqRh7P1A2ZwkhOA==", "id"=>"kaz123"}
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[36mCACHE Admin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "admins" SET "encrypted_token" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["encrypted_token", "47ac3328f392c55d3fad316b79440a4da53ad6f6"], ["updated_at", "2018-02-11 08:11:00.251405"], ["id", 7]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 36ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:11:00 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (5.6ms)
+  Rendered shared/_head.html.erb (59.8ms)
+  Rendered shared/_logo.html.erb (1.2ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 83ms (Views: 76.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/uploads/category/image/17/Markdowns-56a7f71d5f9b58b7d0efaf75.jpg" for 127.0.0.1 at 2018-02-11 19:11:00 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-11 19:11:00 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_head.html.erb (40.7ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/new" for 127.0.0.1 at 2018-02-11 19:11:14 +1100
+Processing by AdminsController#new as HTML
+  Rendering admins/new.html.erb within layouts/application
+  Rendered admins/new.html.erb within layouts/application (14.0ms)
+  Rendered shared/_head.html.erb (44.9ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins" for 127.0.0.1 at 2018-02-11 19:11:20 +1100
+Processing by AdminsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gNTMczrJ6XEWmZ1ItJRjUs+VMNs4REV67/4n5mld2pBqChwz5bF7Pz/FeNPdtf0o88NRwhfEz+Kgoo5cA/q8+A==", "admin"=>{"username"=>"kaz123", "password"=>"[FILTERED]", "stay_signed_in"=>"1"}, "commit"=>"Sign in"}
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[36mCACHE Admin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "admins" SET "encrypted_token" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["encrypted_token", "cc51cecd111db433d1bce43b9a18635734ad4530"], ["updated_at", "2018-02-11 08:11:20.110849"], ["id", 7]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 35ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:11:20 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (5.3ms)
+  Rendered shared/_head.html.erb (65.7ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/uploads/category/image/17/Markdowns-56a7f71d5f9b58b7d0efaf75.jpg" for 127.0.0.1 at 2018-02-11 19:11:20 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-11 19:11:20 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_head.html.erb (44.5ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (1.1ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/17" for 127.0.0.1 at 2018-02-11 19:11:25 +1100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mWork Load (1.1ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."category_id" = $1 ORDER BY "works"."position" ASC[0m  [["category_id", 17]]
+  Rendered categories/show.html.erb within layouts/application (23.5ms)
+  Rendered shared/_head.html.erb (52.1ms)
+  Rendered shared/_logo.html.erb (0.7ms)
+  Rendered shared/_nav_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 174ms (Views: 80.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/uploads/work/image/53/mediocre.jpg" for 127.0.0.1 at 2018-02-11 19:11:25 +1100
+Started GET "/home" for 127.0.0.1 at 2018-02-11 19:11:25 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_head.html.erb (56.1ms)
+  Rendered shared/_logo.html.erb (0.8ms)
+  Rendered shared/_nav_bar.html.erb (1.1ms)
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-11 19:11:27 +1100
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (5.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."position" ASC[0m
+  Rendered categories/index.html.erb within layouts/application (18.2ms)
+  Rendered shared/_head.html.erb (129.5ms)
+  Rendered shared/_logo.html.erb (1.1ms)
+  Rendered shared/_nav_bar.html.erb (0.9ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 175ms (Views: 163.7ms | ActiveRecord: 5.0ms)
+
+
