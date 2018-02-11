@@ -47625,3 +47625,35 @@ Content-Transfer-Encoding: 7bit
   Rendering basic_mailer/welcome_email.html.erb within layouts/mailer
   Rendered basic_mailer/welcome_email.html.erb within layouts/mailer (0.0ms)
 BasicMailer#welcome_email: processed outbound mail in 14.6ms
+Started GET "/" for 127.0.0.1 at 2018-02-11 21:12:18 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#authorize as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "kaz123"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 28ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-02-11 21:12:19 +1100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (425.1ms)
+  Rendered shared/_head.html.erb (64.8ms)
+  Rendered shared/_logo.html.erb (0.9ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 503ms (Views: 501.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-02-11 21:12:21 +1100
+Processing by ServicesController#index as HTML
+  Rendering services/index.html.erb within layouts/application
+  Rendered services/index.html.erb within layouts/application (3.2ms)
+  Rendered shared/_head.html.erb (61.4ms)
+  Rendered shared/_logo.html.erb (1.1ms)
+  Rendered shared/_nav_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
