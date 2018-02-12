@@ -1,5 +1,10 @@
 @import 'bootstrap'
 
+// vars
+
+$pink: #ffe
+
+
 //GENERAL
 
 a.subtle:hover
@@ -199,8 +204,17 @@ footer
 // FLASHES
 
 .flash
-  background: #ccc
-  padding: 10px
+  z-index: 9999
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  padding: 2rem
+  opacity: 0.7
+  &.success
+    background: $success
+  &.error
+    background: $warning
 
 // BREACKPOINTS
 
@@ -214,7 +228,7 @@ footer
     float: none
     margin: auto
     text-align: center
-    background: #ffe
+    background: $pink
     margin-top: 0
     position: fixed !important
     top: 0
