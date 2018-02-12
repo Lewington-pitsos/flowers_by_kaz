@@ -2,10 +2,10 @@
 
 <%= form_for @admin do |f| %>
   <%= f.label 'Username:' %>
-  <%= f.text_field :username %>
+  <input type="text" name="admin[username]" id="admin_username" required>
   <br />
   <%= f.label 'Password:' %>
-  <%= f.password_field :password %>
+  <input type="password" name="admin[password]" id="admin_password" required>
   <br />
 
   <%= f.label 'Stay Signed in?' %>
@@ -14,5 +14,6 @@
 
   <%= f.submit 'Sign in' %>
 <% end %>
+<br />
 
 <%= link_to 'back to gallery', categories_path %>
