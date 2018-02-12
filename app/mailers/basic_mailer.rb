@@ -1,12 +1,7 @@
 class BasicMailer < ApplicationMailer
   default from: 'altitudechess@gmail.com'
   # default is a hash with a bunch of values representing the default configureation for an email send (address, sender, subejct, etc)
-
-  def welcome_email(info)
-    @name = info[:name]
-    mail(to: info[:email], subject: 'FlowersByKaz has received your email')
-  end
-
+  
   def inquiry(info)
     @name = info[:name]
     @email = info[:email]
