@@ -54,4 +54,10 @@ $(window).on('turbolinks:load', function() {
   setTimeout(function() {
     fadeAndHide('.flash');
   }, 4000)
+
+	// get current URL path and assign 'active' class to the proper nav link
+	var pathname = window.location.pathname;
+  $('.navbar-nav > li').removeClass('active');
+	$('.navbar-nav > li > a[href="'+pathname+'"]').parent().addClass('active');
+
 })
