@@ -1,7 +1,7 @@
 <%= form_for @category do |f| %>
   <div class="form-group">
     <%= f.label 'Category title (required):' %>
-    <%= f.text_field :title %>
+    <input type="text" name="category[title]" value="<%= @category.title %>" id="category_title" required>
     <br />
   </div>
   <div class="form-group">
@@ -22,3 +22,4 @@
       </div>
     </div>
 <% end %>
+<br />

@@ -18,3 +18,13 @@
     </div>
   <% end %>
 </div>
+
+<div class="row breadcrumbs">
+  <div class="col-12">
+    <% if session[:admin] %>
+      <div class="row breadcrumbs">
+        <%= link_to 'Create New Category', new_category_path, method: :get %>
+      </div>
+    <% end %>
+  </div>
+</div>
