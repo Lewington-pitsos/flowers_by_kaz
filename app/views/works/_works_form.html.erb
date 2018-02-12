@@ -1,18 +1,18 @@
 <%= form_for [@category, @work] do |f| %>
   <div class="form-group">
-    <%= f.label 'Work Name:' %>
-    <%= f.text_field :title %>
+    <%= f.label 'Work Name' %>
+    <%= f.text_field :title, value: @work.title %>
     <br />
   </div>
   <div class="form-group">
     <%= f.label 'Image:' %>
-    <%= f.file_field :image, class: 'file-upload' %>
+    <%= f.file_field :image, class: 'file-upload', value: @work.image.url %>
     <%= render '/shared/hidden_loader' %>
     <br />
   </div>
   <div class="form-group">
     <%= f.label 'Caption:' %>
-    <%= f.text_area :caption, rows: 8, cols: 40 %>
+    <%= f.text_area :caption, rows: 8, cols: 40, value: @work.caption %>
     <br /><br />
   <div class="form-group">
     <%= f.label 'Place (1 = first place, 2 = second, etc...):' %>
