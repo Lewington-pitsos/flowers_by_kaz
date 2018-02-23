@@ -17,7 +17,7 @@ a.subtle:hover
   font-size: 0.9rem
   line-height: 1.8rem
 .page-header
-  margin-bottom: 8rem
+  margin-bottom: 5rem
 
 .delicate
   font-size: 0.8rem
@@ -35,6 +35,9 @@ a.subtle:hover
   &.white
     background: #fff
     background: rgba(255, 255, 255, 0.6)
+  &.soft-white
+    background: #fff
+    background: rgba(255, 255, 255, 0.25)
   &.black
     background: #000
     background: rgba(0, 0, 0, 0.8)
@@ -135,7 +138,7 @@ footer
     .picture
       padding: 0
     .text
-      padding: 0.5rem 3rem
+      padding: 2rem 3rem
       background: #ccd
       display: flex
       justify-content: center
@@ -280,6 +283,23 @@ footer
     .navbar-toggler
       margin: auto
 
+@media (min-width: 992px)
+  //SERVICES
+  footer
+    ul.details
+      padding-bottom: 12rem
+
+@media (max-width: 991px)
+  //SERVICES
+
+  .services
+    .row
+      .text
+        padding: 1.5rem 1.5rem
+        h5
+          font-size: 1rem
+        p
+          line-height: 1.4rem
 
 @media (max-width: 767px)
 
@@ -289,5 +309,10 @@ footer
     .row
       .text
         padding: 3rem 3rem
+        h5
+          font-size: 1.4rem
+        p
+          line-height: 1.8rem
+
   .work-nav
     font-size: 1.5rem
