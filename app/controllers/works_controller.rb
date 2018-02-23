@@ -33,7 +33,7 @@ class WorksController < ApplicationController
     deleted_position = @work.position
     @work.destroy
     work_shuffle_down(deleted_position, id)
-
+    flash[:success] = 'work deleted successfully'
     redirect_to category_path(id)
   end
 
