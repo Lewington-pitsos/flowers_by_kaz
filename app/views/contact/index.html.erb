@@ -1,24 +1,24 @@
 <div class="row justify-content-between no-gutters contact">
   <div class="col-md-6 col-sm-7 column-top">
     <div class="info-container">
-      <h5>Some title</h5>
-      <p class="text-justify delicate">Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qu</p>
+      <h5>Inquiries and Orders</h5>
+      <p class="text-justify delicate">Based in Frankston South, Melbourne, Australia. Flowers By Kaz services areas on the Mornington Peninsula as well as South East suburbs of Melbourne. Please contact us for all quotes, orders, consultations and general enquiries.</p>
     </div>
-    <div class="form-container">
+    <div class="form-container info" id="email-form">
       <form action="/send_mail" method="post">
         <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
         <div class="form-group">
           <label for="email">Email (Required)</label>
-          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="name@example.com" required>
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
           <label for="name">Name (Required)</label>
-          <input type="text" class="form-control" name="name" id="name" placeholder="Smon Jith" required>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Petunia Rose" required>
         </div>
         <div class="form-group">
-          <label for="content">Message</label>
-          <textarea class="form-control" placeholder="Message" name="content" id="content" rows="10"></textarea>
+          <label for="content">Inquiry</label>
+          <textarea class="form-control" placeholder="Inquiry" name="content" id="content" rows="10"></textarea>
         </div>
         <button type="submit" class="btn btn-pink">Submit</button>
       </form>
