@@ -2,7 +2,14 @@
 
 // vars
 
-$pink: #ffe
+$pink: #EFDDE0
+
+$pink-a: #F0F0F0
+$pink-b: #F0E5E7
+$pink-c: #EFDDE0
+$pink-d: #E9C5CB
+$pink-e: #e3b5bd
+$pink-f: #f8f2f2
 
 
 //GENERAL
@@ -12,6 +19,9 @@ img
 
 p
   text-align: justify
+
+a
+  color: inherit !important
 
 a.subtle:hover
   text-decoration: none !important
@@ -48,6 +58,9 @@ a.subtle:hover
   &.black
     background: #000
     background: rgba(0, 0, 0, 0.8)
+  &.dark
+    background: #000
+    background: rgba(0, 0, 0, 0.2)
 
 .opaque
   opacity: 0
@@ -142,16 +155,22 @@ footer
       padding: 0
     .text
       padding: 2rem 3rem
-      background: #ccd
+      background: $pink-a
       display: flex
       justify-content: center
       flex-direction: column
       &.two
-        background: $pink
+        background: $pink-b
       &.three
-        background: #ccd
+        background: $pink-c
       &.four
-        background: #ccd
+        background: $pink-d
+    .banner
+      padding: 3rem 0
+      &.final
+        background: $pink-e
+      &.title
+        background: $pink-f
 
 // CONTACT
 .contact

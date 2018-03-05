@@ -1,12 +1,15 @@
 <div class="container-fluid p-0">
-  <div class="container-fluid text-center p-0">
-    <h1 class="page-header">Services</h1>
-  </div>
-
   <div class="container-fluid services p-0">
+    <div class="row justify-content-around">
+      <div class="col-12 p-0">
+        <div class="container-fluid banner title">
+          <h1 class="text-center">Services</h1>
+        </div>
+      </div>
+    </div>
     <div class="row justify-content-around service opaque">
       <div class="col-md-5 picture">
-        <div id="carouselOne" class="carousel slide" data-ride="carousel">
+        <div id="carouselOne" class="carousel slide" data-ride="carousel" data-interval="4250">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src="<%= image_path('blossems.JPG') %>" alt="First slide">
@@ -30,7 +33,7 @@
       </div>
       <div class="col-md-6 text one">
         <h5>Flowers Delivered</h5>
-        <p class="delicate text-muted">
+        <p class="delicate ">
           Fresh flower arrangements delivered to your door or to a special someone. This includes bouquets, box arrangements, vase arrangements, and more. Delivery is available within the Mornington Peninsula and South East suburbs of Melbourne at a cost of $5 to $15. Delivery within Frankston or surrounding suburbs is FREE.
         </p>
       </div>
@@ -39,12 +42,12 @@
   <div class="row justify-content-around text-first service opaque">
     <div class="col-md-6 text two">
       <h5>Weddings</h5>
-      <p class="delicate text-muted">
+      <p class="delicate ">
         Complete wedding flower packages with no minimum cost. This starts with a free consultation to establish what you need, and discuss the style and colours of flowers to suit your wedding ceremony and reception.
       </p>
     </div>
     <div class="col-md-5 picture">
-      <div id="carouselThree" class="carousel slide" data-ride="carousel">
+      <div id="carouselThree" class="carousel slide" data-ride="carousel" data-interval="4000">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="<%= image_path('blossems.JPG') %>" alt="First slide">
@@ -70,7 +73,7 @@
 
   <div class="row justify-content-around service opaque">
     <div class="col-md-5 picture">
-      <div id="carouselTwo" class="carousel slide" data-ride="carousel">
+      <div id="carouselTwo" class="carousel slide" data-ride="carousel" data-interval="3750">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="<%= image_path('blossems.JPG') %>" alt="First slide">
@@ -94,7 +97,7 @@
     </div>
     <div class="col-md-6 text three">
       <h5>Corporates</h5>
-      <p class="delicate text-muted">
+      <p class="delicate ">
         Flower arrangements for your business such as front desk reception, waiting room, and foyer arrangements, as well as restaurant table flowers, and flowers for special workplace events.
       </p>
     </div>
@@ -103,12 +106,12 @@
   <div class="row justify-content-around service text-first opaque">
     <div class="col-md-6 text four">
       <h5>Events</h5>
-      <p class="delicate text-muted">
+      <p class="delicate ">
         Flower arrangement packages for parties, dinners, ceremonies, award nights, and more. I work within your budget to design arrangements for the venue that will make your event extra special and beautiful.
       </p>
     </div>
     <div class="col-md-5 picture">
-      <div id="carouselTwo" class="carousel slide" data-ride="carousel">
+      <div id="carouselFour" class="carousel slide" data-ride="carousel" data-interval="3500">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="<%= image_path('blossems.JPG') %>" alt="First slide">
@@ -120,15 +123,24 @@
             <img class="d-block w-100" src="<%= image_path('blossems.JPG') %>" alt="Third slide">
           </div>
         </div>
-        <a class="carousel-control-prev caro-link" href="#carouselTwo" role="button" data-slide="prev">
+        <a class="carousel-control-prev caro-link" href="#carouselFour" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon caro-button" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next caro-link" href="#carouselTwo" role="button" data-slide="next">
+        <a class="carousel-control-next caro-link" href="#carouselFour" role="button" data-slide="next">
           <span class="carousel-control-next-icon caro-button" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
       </div>
+    </div>
+  </div>
+  <div class="row justify-content-around service opaque">
+    <div class="col-12 p-0">
+      <a class="nav-link delicate" href="<%= contact_path %>"><div class="container-fluid banner final position-relative">
+        <h5 class="text-center">Further Inquiries</h5>
+        <div class="overlay dark opaque hover-reveal">
+        </div>
+      </div></a>
     </div>
   </div>
 </div>
