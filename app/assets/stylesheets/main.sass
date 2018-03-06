@@ -106,14 +106,35 @@ main
 
 //HOMEPAGE
 
-.caro-link
-  .caro-button
-    opacity: 0
-
-.caro-link:hover
-  background: rgba(0, 0, 0, 0.4)
-  .caro-button
-    opacity: 1
+#welcome-wrapper
+  box-sizing: border-box
+  position: absolute
+  width: 100%
+  height: 70vw
+  margin: auto
+  position: relative
+  .welcome-banner,
+  .overlay
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+  .welcome-banner
+    display: none
+    background-size: cover
+    background-position: center
+  .one
+    display: block
+    background-image: image-url('works/IMG_1.JPG')
+    background-position: 50% 50%
+  .two
+    background-image: image-url('works/IMG_2.JPG')
+  .three
+    background-image: image-url('works/IMG_3.JPG')
+  .four
+    background-image: image-url('works/IMG_4.JPG')
+    background-position: 10% 5%
 
 //FOOTER
 
