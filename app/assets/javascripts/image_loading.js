@@ -4,8 +4,12 @@ function fadeInImage($element, url) {
   // sets the element's background to that url and fades the element in
   setTimeout(function() {
     $element.attr('src', url)
-    $element.css( "background-image", "url('" + url + "')" ).fadeTo(800, 1)
-    $element.closest('.loading-overlay-holder').find('.loader-holder').remove()
+    $element.css( "background-image", "url('" + url + "')" ).fadeTo(1200, 1)
+    $loader = $element.closest('.loading-overlay-holder').find('.loader-holder')
+    $loader.fadeTo(400, 0)
+    setTimeout(function() {
+      $element.closest('.loading-overlay-holder').find('.loader-holder').remove()
+    }, 701)
   }, 400)
 }
 
