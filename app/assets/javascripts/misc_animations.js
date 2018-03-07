@@ -40,6 +40,9 @@ $(window).on('turbolinks:load', function() {
     $(event.target).fadeTo(300, 0);
   })
 
+  // in case we clicked on a link without hovering off it
+  $('.opaque.hover-reveal').fadeTo(100, 0)
+
   // if elligable elements exist, on every scroll event we check if certain elements are in view, and fade them in if they are visible
   var hiddenServiceElements = $('.service.opaque');
   if (hiddenServiceElements.length) {
