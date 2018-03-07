@@ -40,11 +40,6 @@ $(window).on('turbolinks:load', function() {
     $(event.target).fadeTo(300, 0);
   })
 
-  $('.content-wrapper').on('click', '.opaque.click-reveal', function(event) {
-    $('.opaque.click-reveal').fadeTo(500, 1);
-    $('.default-profile').fadeTo(500, 0.01);
-  })
-
   // if elligable elements exist, on every scroll event we check if certain elements are in view, and fade them in if they are visible
   var hiddenServiceElements = $('.service.opaque');
   if (hiddenServiceElements.length) {
@@ -66,8 +61,16 @@ $(window).on('turbolinks:load', function() {
 	$('.navbar-nav > li > a[href="'+pathname+'"]').parent().addClass('active');
 
 
+  // Profile images fading interchange
+
+  $('.secondary-profile').on('click', function(event) {
+    $(this).fadeOut(400)
+    $('.default-profile').fadeTo(400, 1)
+  })
+
   $('.default-profile').on('click', function(event) {
-    console.log(event.target);
+    $(this).fadeTo(400, 0.01)
+    $('.secondary-profile').fadeTo(400, 1)
   })
 
 })
