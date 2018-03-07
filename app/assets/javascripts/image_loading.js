@@ -7,6 +7,8 @@ $(window).on('turbolinks:load', function() {
     var image = new Image();
     image.src = url;
     console.log($element);
-    $element.css( "background-image", "url('" + url + "')" );
+    image.onload = function() {
+      $element.css( "background-image", "url('" + url + "')" ).fadeTo(800, 1);
+    }
   })
 })
