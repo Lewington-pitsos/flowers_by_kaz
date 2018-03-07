@@ -1,3 +1,7 @@
+function fadeInImage($element, url) {
+  $element.css( "background-image", "url('" + url + "')" ).fadeTo(800, 1);
+}
+
 
 $(window).on('turbolinks:load', function() {
   console.log('image loading');
@@ -7,9 +11,6 @@ $(window).on('turbolinks:load', function() {
     $element = $( this );
     var image = new Image();
     image.src = url;
-    console.log($element);
-    $(image).on('load', function() {
-      $element.css( "background-image", "url('" + url + "')" ).fadeTo(800, 1);
-    })
+    $(image).on('load', fadeInImage.bind(this, $element, url))
   })
 })
