@@ -3,6 +3,7 @@ function fadeInImage($element, url) {
   // finds the element's loader element and removes it form the DOM
   // sets the element's background to that url and fades the element in
   setTimeout(function() {
+    $element.attr('src', url)
     $element.css( "background-image", "url('" + url + "')" ).fadeTo(800, 1)
     $element.closest('.loading-overlay-holder').find('.loader-holder').remove()
   }, 400)
@@ -22,6 +23,11 @@ function loadIndirectly($element) {
 $(window).on('turbolinks:load', function() {
   // loades all the square work images on the page in indirectly so it looks smooth
   $('.square-img-wrapper').each(function() {
+    loadIndirectly($(this));
+  })
+
+  $('.default-profile').each(function() {
+    console.log(this);
     loadIndirectly($(this));
   })
 })
