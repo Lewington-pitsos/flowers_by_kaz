@@ -11,8 +11,9 @@ function showWork($element) {
   $('#work-holder').data('element', data.number)
 
   // we also fade in the overlay of the selected elemtn in the background
-  $('.work-overlay').fadeTo(300, 0);
   $element.fadeTo(300, 1);
+  $('.active-work').fadeTo(300, 0).removeClass('active-work');
+  $element.addClass('active-work')
 }
 
 
