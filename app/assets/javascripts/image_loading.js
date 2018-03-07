@@ -1,8 +1,9 @@
 function fadeInImage($element, url) {
-  // takes an element and an image url and make the element invisible
+  // takes an element and an image url
+  // finds the element's loader element and removes it form the DOM
   // sets the element's background to that url and fades the element in
-  $element.closest('.loading-overlay-holder').find('.loader-holder').remove()
   $element.css( "background-image", "url('" + url + "')" ).fadeTo(800, 1)
+  $element.closest('.loading-overlay-holder').find('.loader-holder').remove()
 }
 
 function loadIndirectly($element) {
