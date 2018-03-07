@@ -1,8 +1,15 @@
 <div class="row justify-content-center about">
   <div class="col-lg-7 col-sm-10 top p-0">
-    <img class="img-fluid default-profile" src="<%= image_path('portrait.jpg') %>" alt="">
-    <div class="overlay secondary-profile">
-      <img class="img-fluid" src="<%= image_path('blossems.JPG') %>" alt="">
+    <div class="position-relative loading-overlay-holder">
+      <div class="position-relative">
+        <img class="img-fluid default-profile" src="" alt="Picture of Kaz looking fleek" data-url="<%= image_path('portrait.jpg') %>">
+        <div class="overlay secondary-profile">
+          <img class="img-fluid" src="<%= image_path('blossems.JPG') %>" alt="">
+        </div>
+      </div>
+      <div class="overlay d-flex align-items-center justify-content-center loader-holder">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
     </div>
   </div>
   <div class="col-lg-5 col-sm-10">

@@ -4,11 +4,18 @@
   <% @works.each do |work| %>
 
   <div class="col-lg-2 col-md-3 col-sm-4 col-6 covers-col p-1">
-    <a href="<%= work_path(work.id) %>" class="subtle"><div class="container-fluid position-relative p-0">
-      <div class="overlay white opaque hover-reveal work-overlay" data-title="<%= work.title %>" data-caption="<%= work.caption %>" data-url="<%= image_url(work.image.url) %>" data-number="<%= count %>" id="work-<%= count %>"></div>
-      <div class="square-img-wrapper" style="background-image: url(<%= image_url(work.image.url) %>)">
+    <a href="<%= work_path(work.id) %>" class="subtle">
+      <div class="position-relative loading-overlay-holder">
+        <div class="container-fluid position-relative p-0">
+          <div class="overlay white opaque hover-reveal work-overlay" data-title="<%= work.title %>" data-caption="<%= work.caption %>" data-url="<%= image_url(work.image.url) %>" data-number="<%= count %>" id="work-<%= count %>"></div>
+          <div class="square-img-wrapper opaque" data-url="<%= image_url(work.image.url) %>">
+          </div>
+        </div>
+        <div class="overlay d-flex align-items-center justify-content-center loader-holder">
+          <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
       </div>
-    </div></a>
+    </a>
     <% if session[:admin] %>
       <h4>Position: <%= work.position %></h4>
        <%= button_to 'Delete', "/works/#{work.id}", method: :delete %>
