@@ -1,6 +1,8 @@
 # Load the Rails application.
 require_relative 'application'
 
+ActionMailer::Base.raise_delivery_errors = true
+
 ActionMailer::Base.smtp_settings = {
   :port           => ENV['MAILGUN_SMTP_PORT'],
   :address        => ENV['MAILGUN_SMTP_SERVER'],
