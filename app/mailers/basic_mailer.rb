@@ -1,12 +1,12 @@
 class BasicMailer < ApplicationMailer
-  default from: 'ellamannes@gmail.com'
+  default from: 'kazpetrulyte@outlook.com'
   # default is a hash with a bunch of values representing the default configureation for an email send (address, sender, subejct, etc)
 
   def inquiry(info)
     @name = info[:name]
     @email = info[:email]
     @content = info[:content]
-    mail(to: 'lewington@student.unimelb.edu.au', subject: "Message from #{@name} via flowersbykaz.com")
+    mail(to: 'kazpetrulyte@outlook.com', subject: "Message from #{@name} via flowersbykaz.com")
   end
 
   def confirmation(info)
