@@ -1,5 +1,5 @@
 class BasicMailer < ApplicationMailer
-  default from: 'altitudechess@gmail.com'
+  default from: 'ellamannes@gmail.com'
   # default is a hash with a bunch of values representing the default configureation for an email send (address, sender, subejct, etc)
 
   def inquiry(info)

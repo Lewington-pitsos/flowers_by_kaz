@@ -15,6 +15,6 @@ class ContactController < ApplicationController
   private
 
   def mail_info
-    params.permit(:email, :name, :content)
+    params.permit(:email, :name, :content, :authenticity_token)
   end
 end
