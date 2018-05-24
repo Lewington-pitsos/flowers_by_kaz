@@ -7,7 +7,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'fog-aws'
 gem 'bootstrap', '~> 4.0.0'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'jquery-rails'
